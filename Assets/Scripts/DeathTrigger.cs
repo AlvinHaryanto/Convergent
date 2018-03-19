@@ -6,13 +6,15 @@ public class DeathTrigger : MonoBehaviour
 {
 
     public GameObject ship;
+    public GameObject explosion;
 
     private void OnTriggerStay(Collider col)
     {
         if(col.gameObject.tag == "Bullet")
         {
-            Destroy(ship.gameObject);
+            Instantiate(explosion, col.transform.position, col.transform.rotation);
             Destroy(col.gameObject);
+            Destroy(ship.gameObject);
         }
     }
 }

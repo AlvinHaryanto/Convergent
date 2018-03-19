@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeflectTrigger : MonoBehaviour {
-    
-	void Start() {
+    void Start() {
 	}
 
     private void OnTriggerStay(Collider col)

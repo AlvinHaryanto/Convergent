@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.060942724, g: 0.057659976, b: 0.06599065, a: 1}
+  m_IndirectSpecularColor: {r: 0.061002582, g: 0.05772669, b: 0.06604487, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -266,7 +266,7 @@ Transform:
   m_Children:
   - {fileID: 482327250}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &432320338
 MonoBehaviour:
@@ -287,7 +287,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 482327250}
-  - component: {fileID: 482327251}
   m_Layer: 0
   m_Name: WayPoints1
   m_TagString: Untagged
@@ -308,17 +307,6 @@ Transform:
   m_Father: {fileID: 432320337}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &482327251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 482327249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0632d6c62c6606844a7239e471536d9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &812156967
 GameObject:
   m_ObjectHideFlags: 0
@@ -4027,6 +4015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 2083458039}
+  explosion: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
 --- !u!1 &1219136619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,7 +4360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4415900792845612, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114647478917021806, guid: babb2d1c8c78d224abd27f43543008cd,
         type: 2}
