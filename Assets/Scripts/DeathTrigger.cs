@@ -12,6 +12,7 @@ public class DeathTrigger : MonoBehaviour
         if(col.gameObject.tag == "Bullet")
         {
             Destroy(ship.gameObject);
+            Destroy(col.gameObject);
         }
     }
 }
