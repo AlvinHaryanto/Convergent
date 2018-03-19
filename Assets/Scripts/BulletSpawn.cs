@@ -34,7 +34,7 @@ public class BulletSpawn : MonoBehaviour {
 				location.x = 7.27f; 
 			}
 
-			Debug.Log(location.x);
+			//Debug.Log(location.x);
 			Instantiate (bullet, location, bullet.transform.rotation);
 
 			count = 0;

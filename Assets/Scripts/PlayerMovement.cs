@@ -13,13 +13,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	private bool move;
 
-	private Vector3 testTarget, testTarget2;
+	//private Vector3 testTarget, testTarget2;
 	public float speed = 10f;
 
-	void Start() {
+	/*void Start() {
 		testTarget = right.position;
 		testTarget2 = left.position;
-	} 
+	} */
 
 	void Update() {
 		startPos = transform.position;
