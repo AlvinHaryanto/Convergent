@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeflectTrigger : MonoBehaviour {
+    public PlayerMovement player;
     void Start() {
 	}
 
@@ -10,8 +11,8 @@ public class DeflectTrigger : MonoBehaviour {
     {
 		if (Input.GetKeyDown(KeyCode.Space))
         {
-			if (col.gameObject.tag == "Bullet") {
-
+            player.plyrAnim.Play("ShipDeflect");
+            if (col.gameObject.tag == "Bullet") {
                 Debug.Log("Deflected");
                 col.gameObject.SendMessage("SetDeflecting",true);
 			}
