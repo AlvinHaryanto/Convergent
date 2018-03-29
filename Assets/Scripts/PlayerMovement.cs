@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
                 plyrAnim.SetBool("MoveLeft", true);
             }
 
-		} else {
+		} else if(transform.position == mid.position) {
 			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				endPos = left.position;
 				move = true;

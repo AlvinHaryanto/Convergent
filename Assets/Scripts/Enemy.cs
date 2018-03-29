@@ -8,10 +8,13 @@ public class Enemy : MonoBehaviour
 
     public Transform target;
     private int wavepointIndex = 0;
+    
 
+    bool canDeflect;
     private void Start()
     {
         target = Waypoints.points[0];
+        //canDeflect = GameObject.Find("Bullet").GetComponent<BulletMovement>().GetDeflecting();
     }
     private void FixedUpdate()
     {
@@ -37,6 +40,19 @@ public class Enemy : MonoBehaviour
         target = Waypoints.points[wavepointIndex];
 
     }
+
+    /*void OnTriggerStay(Collider col)
+    {
+        
+        if (col.gameObject.tag == "Bullet")
+        {
+            Instantiate(explosion, col.transform.position, col.transform.rotation);
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+    }*/
+
+   
 
 }
 

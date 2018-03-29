@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06078402, g: 0.057558052, b: 0.06584248, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1060344736
+  randomSeed: 1971870926
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4242,6 +4242,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1883723463}
+  - component: {fileID: 1883723464}
   m_Layer: 0
   m_Name: RedLineHolder
   m_TagString: Untagged
@@ -4256,13 +4257,30 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1883723462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -20, z: -50}
+  m_LocalPosition: {x: 0, y: -20, z: -109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 812156968}
   m_Father: {fileID: 1334964188}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1883723464
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883723462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08d5939e4d9e9df4b85be5b5802b2aae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &2083458038
 Prefab:
   m_ObjectHideFlags: 0
@@ -4317,6 +4335,11 @@ Prefab:
       propertyPath: right
       value: 
       objectReference: {fileID: 879427944}
+    - target: {fileID: 114380615633455548, guid: f680047ae82a14b429b68564f5cf2b73,
+        type: 2}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
   m_IsPrefabParent: 0
