@@ -8,6 +8,7 @@ public class BulletMovement : MonoBehaviour
     public float speed;
     Rigidbody rb;
 
+	public bool deflectable = false;
     public bool deflecting;
     public Transform target;
     public float rotateSpeed = 200f;

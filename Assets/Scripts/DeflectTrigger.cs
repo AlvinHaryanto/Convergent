@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class DeflectTrigger : MonoBehaviour {
     public PlayerMovement player;
-    void Start() {
-	}
+	public BulletSpawn bspawn;
+	int x;
 
     private void OnTriggerStay(Collider col)
     {
+		
 		if (Input.GetKeyDown(KeyCode.Space))
         {
             player.plyrAnim.Play("ShipDeflect");
-            if (col.gameObject.tag == "Bullet") {
+			if (col.gameObject.tag == "Bullet"&&col.gameObject.GetComponent<BulletMovement>().deflectable) {
                 Debug.Log("Deflected");
                 col.gameObject.SendMessage("SetDeflecting",true);
 			}
         }
 
     }
+
+	/*void Update() {
+		x = bspawn.GetChooser();
+	}*/
 }

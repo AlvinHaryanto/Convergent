@@ -5,13 +5,20 @@ using UnityEngine;
 public class BulletSpawn : MonoBehaviour {
 
 	public GameObject bullet;
+	public GameObject undeflectable;
 	public float timer;
 
 	Vector3 location;
+
+	int BulletChooser;
 	float count;
 	private void Start() {
 		location = new Vector3 (0, 0, 67.59f);
 		count = 0;
+	}
+
+	public int GetChooser() {
+		return BulletChooser;
 	}
 
 	void Update() {
@@ -22,6 +29,7 @@ public class BulletSpawn : MonoBehaviour {
 		if (count >= timer) {
 			//Debug.Log ("timer done");
 
+			BulletChooser = Random.Range (1, 20);
 			randomizer = Random.Range (1, 10);
 			//Debug.Log (randomizer);
 
@@ -34,8 +42,12 @@ public class BulletSpawn : MonoBehaviour {
 				location.x = 7.27f; 
 			}
 
-			//Debug.Log(location.x);
-			Instantiate (bullet, location, bullet.transform.rotation);
+			if (BulletChooser >= 1 && BulletChooser <= 10) {
+				Instantiate (bullet, location, bullet.transform.rotation);
+			} else {
+				Instantiate (undeflectable, location, bullet.transform.rotation);
+			}
+
 
 			count = 0;
 		}
