@@ -195,9 +195,12 @@ MonoBehaviour:
   speed: 4900
   deflectable: 0
   deflecting: 0
+  damage: 1
   target: {fileID: 0}
   rotateSpeed: 200
   explosion: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
+  playerSource: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 1f9387d1393c2284c926fcbc1ddb1fce, type: 3}
 --- !u!135 &135735439271927926
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
+    public int EnemyHP = 3;
     public float speed = 10f;
 
     public Transform target;
@@ -40,7 +41,21 @@ public class Enemy : MonoBehaviour
         target = Waypoints.points[wavepointIndex];
 
     }
+    public void damagedBy(int x)
+    {
+        EnemyHP -= x;
+        if (EnemyHP <= 0)
+        {
+            //game over script from death trigger
+            //SHOULD WAIT 3 SECONDS
+            GameOver();
+        }
+    }
 
+    void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     /*void OnTriggerStay(Collider col)
     {
         

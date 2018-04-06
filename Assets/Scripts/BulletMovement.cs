@@ -10,10 +10,12 @@ public class BulletMovement : MonoBehaviour
 
 	public bool deflectable = false;
     public bool deflecting;
+    public int damage = 1;
     public Transform target;
     public float rotateSpeed = 200f;
     public GameObject explosion;
-
+    public GameObject playerSource;
+    public AudioClip explosionSound;
     private GameObject EnemyTarget;
     void Start()
     {
@@ -93,7 +95,11 @@ public class BulletMovement : MonoBehaviour
         if (deflecting == true && col.gameObject.tag == "Enemy")
         {
             Instantiate(explosion, col.transform.position, col.transform.rotation);
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
+            //playerSource = GameObject.Find("Main Camera/AudioSource");
+            //playerSource.GetComponent<AudioSource>().PlayOneShot(explosionSound);
+            col.gameObject.GetComponent<Enemy>().damagedBy(damage);
+            //^^damages enemy by 1 damage. Can be changed according to needs in unity's inspector
             Destroy(gameObject);
         }
     }

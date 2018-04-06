@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathTrigger : MonoBehaviour
 {
@@ -8,13 +9,20 @@ public class DeathTrigger : MonoBehaviour
     public GameObject ship;
     public GameObject explosion;
 
-    private void OnTriggerStay(Collider col)
+   void OnTriggerStay(Collider col)
     {
         if(col.gameObject.tag == "Bullet")
         {
             Instantiate(explosion, col.transform.position, col.transform.rotation);
             Destroy(col.gameObject);
             Destroy(ship.gameObject);
+            Gameover();
         }
+
+    }
+
+    public void Gameover()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
