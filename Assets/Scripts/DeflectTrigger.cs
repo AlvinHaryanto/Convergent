@@ -7,16 +7,20 @@ public class DeflectTrigger : MonoBehaviour {
 	public BulletSpawn bspawn;
 	int x;
 
+    public AudioClip deflectClip;
+
     private void OnTriggerStay(Collider col)
     {
 		
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKey(KeyCode.Space))
         {
 			if (col.gameObject.tag == "Bullet"&&col.gameObject.GetComponent<BulletMovement>().deflectable) {
                 player.plyrAnim.Play("ShipDeflect");
                 Debug.Log("Deflected");
                 col.gameObject.SendMessage("SetDeflecting",true);
-			}
+
+                SFX.instance.source.PlayOneShot(deflectClip);
+            }
         }
 
     }

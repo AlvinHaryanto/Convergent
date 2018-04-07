@@ -23,6 +23,6 @@ public class DeathTrigger : MonoBehaviour
 
     public void Gameover()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Gameover(Demo)");
     }
 }
