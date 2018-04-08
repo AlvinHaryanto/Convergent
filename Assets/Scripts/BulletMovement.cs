@@ -48,12 +48,22 @@ public class BulletMovement : MonoBehaviour
 
         }
 
-
-
-        if (transform.position.z <= -10 || transform.position.z >= 70f)
+        //controls bullet despawning, depending if the bullet is deflecting or not
+        if (deflecting)
         {
-            Destroy(gameObject);
+            if (transform.position.z <= -15 || transform.position.z >= 120f)
+            {
+                Destroy(gameObject);
+            }
         }
+        else
+        {
+            if (transform.position.z <= -10 || transform.position.z >= 70f)
+            {
+                Destroy(gameObject);
+            }
+        }
+        
 
 
     }
@@ -94,7 +104,8 @@ public class BulletMovement : MonoBehaviour
     {
         if (deflecting == true && col.gameObject.tag == "Enemy")
         {
-            Instantiate(explosion, col.transform.position, col.transform.rotation);
+            GameObject newExplosion = Instantiate(explosion, col.transform.position, col.transform.rotation);
+            newExplosion.transform.localScale *= 10;
             //Destroy(col.gameObject);
             //playerSource = GameObject.Find("Main Camera/AudioSource");
             //playerSource.GetComponent<AudioSource>().PlayOneShot(explosionSound);
