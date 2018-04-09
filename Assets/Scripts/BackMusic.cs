@@ -19,4 +19,12 @@ public class BackMusic : MonoBehaviour {
         }
     }
 
+	public void PlayMusic(AudioClip clip) {
+		source.clip = clip;
+		source.Play ();
+	}
+
+
+
+
 }
