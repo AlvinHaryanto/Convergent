@@ -17,7 +17,6 @@ public class DeflectTrigger : MonoBehaviour {
 				//Kalau inputan player (player dir, liat di script playermovement) sesuai dengan
 				//input yang diminta (bullet movement.deflectdir) --> deflect
 				player.plyrAnim.Play("ShipDeflect");
-				Debug.Log("Deflected");
 				col.gameObject.SendMessage("SetDeflecting",true);
 				SFX.instance.source.PlayOneShot(deflectClip);
 			}

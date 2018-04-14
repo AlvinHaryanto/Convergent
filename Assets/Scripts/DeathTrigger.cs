@@ -13,10 +13,14 @@ public class DeathTrigger : MonoBehaviour
     {
         if(col.gameObject.tag == "Bullet")
         {
-            Instantiate(explosion, col.transform.position, col.transform.rotation);
-            Destroy(col.gameObject);
-            Destroy(ship.gameObject);
-            Gameover();
+            //destroy only if is not deflecting offlane correctly
+            if(!(col.gameObject.GetComponent<BulletMovement>().getLaneID()==1&& col.gameObject.GetComponent<BulletMovement>().getDeflectDir()==ship.GetComponent<PlayerMovement>().getPlayerDir()))
+            {
+                Instantiate(explosion, col.transform.position, col.transform.rotation);
+                Destroy(col.gameObject);
+                Destroy(ship.gameObject);
+                Gameover();
+            }
         }
 
     }
