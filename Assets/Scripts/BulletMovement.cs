@@ -14,9 +14,16 @@ public class BulletMovement : MonoBehaviour
     public Transform target;
     public float rotateSpeed = 200f;
     public GameObject explosion;
-    public GameObject playerSource;
+    public GameObject Model;
+
     public AudioClip explosionSound;
     private GameObject EnemyTarget;
+	int BulletLaneID=0;
+	//0= on-lane
+	//1= off-lane
+	int BulletDeflectDir=0;
+	//0=to left
+	//1=to right
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -114,4 +121,19 @@ public class BulletMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+	// SETTER GETTER BUAT LANE ID DAN DEFLECT DIR
+	public void setLaneID(int x){
+		BulletLaneID = x;
+	}
+	public int getLaneID() {
+		return BulletLaneID;
+	}
+
+	public void setDeflectDir(int x) {
+		BulletDeflectDir = x;
+	}
+
+	public int getDeflectDir() {
+		return BulletDeflectDir;
+	}
 }

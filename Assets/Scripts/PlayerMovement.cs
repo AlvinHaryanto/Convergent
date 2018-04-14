@@ -12,9 +12,15 @@ public class PlayerMovement : MonoBehaviour {
 	private float currentTime;
 
 	private bool move;
-
+	private float offlaneLeft, offlaneRight;
 	//private Vector3 testTarget, testTarget2;
 	public float speed = 10f;
+
+
+	int PlayerDir=0;
+	//0=to left;
+	//1=to right;
+	//2=sudah sampai;
 
 	void Start() {
         /*
@@ -22,6 +28,8 @@ public class PlayerMovement : MonoBehaviour {
 		testTarget2 = left.position;
         */
         plyrAnim = GetComponent<Animator>();
+		offlaneLeft = -3.3f;
+		offlaneRight = 3.48f;
     }
 
     void Update() {
@@ -60,11 +68,23 @@ public class PlayerMovement : MonoBehaviour {
                 plyrAnim.SetBool("MoveLeft", false);
             }
 		}
+		if (transform.position == left.position || transform.position == mid.position || transform.position == right.position) {
+			PlayerDir = 2;
+			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+				PlayerDir = 1;
+			}
+			if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+				PlayerDir = 0;
+			}
+		}
 
 
 		if (move == true) {
 			transform.position = Vector3.MoveTowards (startPos, endPos, speed * Time.deltaTime);
 		}
-
 	}
+	public int getPlayerDir(){
+		return PlayerDir;
+	}
+	
 }

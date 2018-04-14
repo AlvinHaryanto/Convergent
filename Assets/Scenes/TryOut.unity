@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.060947783, g: 0.057666823, b: 0.065965794, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -391126447
+  randomSeed: -75262812
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4263,6 +4263,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1793003022058096, guid: 1cf12cd9f0fb990459906e65dca833e9, type: 2}
   undeflectable: {fileID: 1209137688299088, guid: c446d0b12e38c794284891ae90cf784f,
+    type: 2}
+  offlane: {fileID: 1209137688299088, guid: 4a924945f0e03d5428b1993f5fa9fdb3, type: 2}
+  offlaneUndeflectable: {fileID: 1209137688299088, guid: 963932f41cc11244b8b45793f738048c,
     type: 2}
   timer: 0.45
 --- !u!1001 &1845846076
