@@ -8,6 +8,7 @@ public class BulletSpawn : MonoBehaviour {
 	public GameObject undeflectable;
 	public GameObject offlane;
 	public GameObject offlaneUndeflectable;
+    public GameObject split;
 	public float timer;
 
 	Vector3 location;
@@ -82,10 +83,19 @@ public class BulletSpawn : MonoBehaviour {
 				}
 
 			} else { //BULLET IS UNDEFLECTABLE
+
 				if (location.x == offlaneLeft || location.x == offlaneRight) { 
 					tempBullet = Instantiate (offlaneUndeflectable, location, bullet.transform.rotation);
 				} else {
-					tempBullet=Instantiate (undeflectable, location, bullet.transform.rotation);
+                    randomizer = Random.Range(1, 10);
+                    if (randomizer <= 5)
+                    {
+                        tempBullet = Instantiate(undeflectable, location, bullet.transform.rotation);
+                    }
+                    else
+                    {
+                        tempBullet = Instantiate(split, location, bullet.transform.rotation);
+                    }
 				}
 
 
