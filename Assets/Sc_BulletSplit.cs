@@ -24,6 +24,8 @@ public class Sc_BulletSplit : MonoBehaviour {
         {
             initZDistance = zDistance;
         }
+        // (bullet.transform.position.z <= playerZ)
+        //    Instantiate(bullet, playerposition)
         if (zDistance < (1-splitPercent) * initZDistance)
         {
 
