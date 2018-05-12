@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.060941353, g: 0.057640076, b: 0.06593655, a: 1}
+  m_IndirectSpecularColor: {r: 0.06092359, g: 0.057647847, b: 0.06594673, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ Transform:
   m_Father: {fileID: 432320337}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &577935317
+--- !u!1001 &602970568
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -345,10 +345,6 @@ Prefab:
     - target: {fileID: 4876695413762130, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
       propertyPath: m_RootOrder
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
-      propertyPath: m_TagString
-      value: Bullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
@@ -740,7 +736,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -75262812
+  randomSeed: 639574464
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4397,7 +4393,8 @@ MonoBehaviour:
   offlane: {fileID: 1209137688299088, guid: e43d30adcfc89f04fac447e4ff83a5da, type: 2}
   offlaneUndeflectable: {fileID: 1209137688299088, guid: 963932f41cc11244b8b45793f738048c,
     type: 2}
-  split: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
+  split: {fileID: 1618751022388860, guid: a1223274539aa4242aa5fd2880e2ce23, type: 2}
+  missile: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
   timer: 0.45
 --- !u!1001 &1845846076
 Prefab:

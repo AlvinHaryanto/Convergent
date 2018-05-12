@@ -7,6 +7,8 @@ public class ExplodeMissile : MonoBehaviour
 
 
     Rigidbody rb;
+    public Animator rocketAnim;
+    public BulletMovement rocketMain;
     public GameObject bullet;
     public GameObject ship;
     
@@ -33,7 +35,13 @@ public class ExplodeMissile : MonoBehaviour
         if (transform.position.z <= PO)
         {
             Instantiate(bullet, ship.transform.position,transform.rotation);
+            GameObject tempBoom = Instantiate(rocketMain.explosion,transform.position,transform.rotation);
+            tempBoom.transform.localScale *= 5;
             DestroyObject(this.gameObject);
+        }
+        if (rocketMain.deflecting)
+        {
+            rocketAnim.SetBool("Deflecting", true);
         }
     }
     

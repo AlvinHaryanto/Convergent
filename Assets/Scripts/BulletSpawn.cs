@@ -2,41 +2,134 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletSpawn : MonoBehaviour {
+public class BulletSpawn : MonoBehaviour
+{
+    private List<int> BulletList = new List<int>();
+    private List<int> LaneList = new List<int>();
+    private int finalIndex = 0;
+    //calls the property of the bullet of index N
 
-	public GameObject bullet;
-	public GameObject undeflectable;
-	public GameObject offlane;
-	public GameObject offlaneUndeflectable;
+    private int currInterval = 0;
+    public GameObject bullet;
+    public GameObject undeflectable;
+    public GameObject offlane;
+    public GameObject offlaneUndeflectable;
     public GameObject split;
-	public float timer;
+    public GameObject missile;
+    public float timer;
 
-	Vector3 location;
+    Vector3 location;
 
-	private float offlaneLeft, offlaneRight;
-	int DeflectDir;
-	int BulletChooser;
-	float count;
-	GameObject tempBullet;
+    private float offlaneLeft, offlaneRight;
+    int DeflectDir;
+    int BulletChooser;
+    float count;
+    GameObject tempBullet;
 
-	private void Start() {
-		location = new Vector3 (0, 0, 67.59f);
-		count = 0;
+    private void Start()
+    {
+        location = new Vector3(0, 0, 67.59f);
+        count = 0;
 
-		offlaneLeft = -3.3f;
-		offlaneRight = 3.48f;
-	}
+        offlaneLeft = -3.3f;
+        offlaneRight = 3.48f;
 
-	public int GetChooser() {
-		return BulletChooser;
-	}
+        //initialize bullet list here
+        //bullet ID legend:
+        //0: Normal - Undeflectable
+        //1: Normal - Deflectable
+        //2: Offlane- Deflectable - Left
+        //3: Offlane- Deflectable - Right
+        //4: Offlane- Undeflectable
+        //5: Split (undeflectable only)
+        //6: Missile (deflectable MUST)
 
-	void Update() {
-		//Debug.Log (count);
-		count += Time.deltaTime;
+        //lane ID legend;
+        //0: left
+        //1: offlane left
+        //2: mid
+        //3: offlane right
+        //4: right
+        addBullet(0, 2);
+        addBullet(0, 4);
+        addBullet(0, 0);
+        addBullet(0, 2);
+        addBullet(1, 2);
+        addBullet(3, 1);
+        addBullet(4, 3);
+        addBullet(3, 3);
+        addBullet(1, 4);
+        addBullet(5, 2);
+        addBullet(5, 0);
+        addBullet(5, 2);
+        addBullet(6, 2);
+        addBullet(6, 4);
+    }
 
-		int randomizer;
-		if (count >= timer) {
+    public int GetChooser()
+    {
+        return BulletChooser;
+    }
+
+    void Update()
+    {
+        //Debug.Log (count);
+        count += Time.deltaTime;
+
+        int randomizer;
+        if (count >= timer)
+        {
+            switch (LaneList[currInterval])
+            {
+                case 0:
+                    location.x = -7.27f;
+                    break;
+                case 1:
+                    location.x = offlaneLeft;
+                    break;
+                case 2:
+                    location.x = 0f;
+                    break;
+                case 3:
+                    location.x = offlaneRight;
+                    break;
+                case 4:
+                    location.x = 7.27f;
+                    break;
+            }
+            switch (BulletList[currInterval])
+            {
+                case 0:
+                    tempBullet = Instantiate(undeflectable, location, bullet.transform.rotation);
+                    break;
+                case 1:
+                    tempBullet = Instantiate(bullet, location, bullet.transform.rotation);
+                    break;
+                case 2:
+                    tempBullet = Instantiate(offlane, location, bullet.transform.rotation);
+                    tempBullet.GetComponent<BulletMovement>().setLaneID(1);
+                    tempBullet.GetComponent<BulletMovement>().setDeflectDir(0);
+                    //lane ID indicates offlane
+                    //deflect dir sets the correct deflection direction
+                    break;
+                case 3:
+                    tempBullet = Instantiate(offlane, location, bullet.transform.rotation);
+                    tempBullet.GetComponent<BulletMovement>().setLaneID(1);
+                    tempBullet.GetComponent<BulletMovement>().setDeflectDir(1);
+                    tempBullet.GetComponent<BulletMovement>().Model.transform.localScale = new Vector3(-1 * tempBullet.GetComponent<BulletMovement>().Model.transform.localScale.x, tempBullet.GetComponent<BulletMovement>().Model.transform.localScale.y, tempBullet.GetComponent<BulletMovement>().Model.transform.localScale.z);
+                    break;
+                case 4:
+                    tempBullet = Instantiate(offlaneUndeflectable, location, bullet.transform.rotation);
+                    tempBullet.GetComponent<BulletMovement>().setLaneID(1);
+                    break;
+                case 5:
+                    tempBullet = Instantiate(split, location, bullet.transform.rotation);
+                    break;
+                case 6:
+                    tempBullet = Instantiate(missile, location, bullet.transform.rotation);
+                    break;
+            }
+            /*
 			//Debug.Log ("timer done");
 
 			BulletChooser = Random.Range (1, 20);
@@ -83,31 +176,33 @@ public class BulletSpawn : MonoBehaviour {
 				}
 
 			} else { //BULLET IS UNDEFLECTABLE
-
 				if (location.x == offlaneLeft || location.x == offlaneRight) { 
 					tempBullet = Instantiate (offlaneUndeflectable, location, bullet.transform.rotation);
 				} else {
-                    randomizer = Random.Range(1, 10);
-                    if (randomizer <= 5)
-                    {
-                        tempBullet = Instantiate(undeflectable, location, bullet.transform.rotation);
-                    }
-                    else
-                    {
-                        tempBullet = Instantiate(split, location, bullet.transform.rotation);
-                    }
+					tempBullet=Instantiate (undeflectable, location, bullet.transform.rotation);
 				}
 
 
 			}
 
+            */
+            currInterval++;
+            if (currInterval >= finalIndex)
+            {
+                currInterval = 0;
+            }
+            count = 0;
+        }
 
-			count = 0;
-		}
 
 
+    }//end of update
+    public void addBullet(int bulletID, int laneID)
+    {
+        BulletList.Add(bulletID);
+        LaneList.Add(laneID);
+        finalIndex++;
+    }
 
-	}
-		
 
 }

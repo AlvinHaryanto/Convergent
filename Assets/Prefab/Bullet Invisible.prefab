@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1209137688299088}
+  m_IsPrefabParent: 1
+--- !u!1 &1209137688299088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4189812199646548}
+  - component: {fileID: 33200645027417484}
+  - component: {fileID: 54903427105082590}
+  - component: {fileID: 65231756897066812}
+  - component: {fileID: 114526568521790538}
+  m_Layer: 0
+  m_Name: Bullet Invisible
+  m_TagString: Bullet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4189812199646548
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209137688299088}
+  m_LocalRotation: {x: -0.9999722, y: -0, z: -0, w: 0.0074624345}
+  m_LocalPosition: {x: -7.27, y: 0, z: 67.59}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!33 &33200645027417484
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209137688299088}
+  m_Mesh: {fileID: 4300000, guid: 94c18c29bdb8de44ca794aa7cf173759, type: 3}
+--- !u!54 &54903427105082590
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209137688299088}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65231756897066812
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209137688299088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.76, y: 2.558611, z: 2.4543643}
+  m_Center: {x: -0.012276669, y: 0.0032894807, z: 0.11580213}
+--- !u!114 &114526568521790538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209137688299088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5bd835e5f04984aa33ace57e2647bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4900
+  deflectable: 0
+  deflecting: 0
+  damage: 1
+  target: {fileID: 0}
+  rotateSpeed: 200
+  explosion: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
+  Model: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 1f9387d1393c2284c926fcbc1ddb1fce, type: 3}
