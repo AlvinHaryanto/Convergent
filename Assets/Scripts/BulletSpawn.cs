@@ -16,7 +16,7 @@ public class BulletSpawn : MonoBehaviour
     public GameObject offlaneUndeflectable;
     public GameObject split;
     public GameObject missile;
-	public GameObject EmptyBullet;
+	//public GameObject EmptyBullet;
     public float timer;
 
     Vector3 location;
@@ -79,8 +79,7 @@ public class BulletSpawn : MonoBehaviour
     {
         //Debug.Log (count);
         count += Time.deltaTime;
-
-        int randomizer;
+        
         if (count >= timer)
         {
             switch (LaneList[currInterval])
@@ -133,7 +132,7 @@ public class BulletSpawn : MonoBehaviour
                     tempBullet = Instantiate(missile, location, bullet.transform.rotation);
                     break;
 				case 7:
-					tempBullet = Instantiate (EmptyBullet, location, bullet.transform.rotation);
+					//EMPTY BULLET
 					break;
 
 			
