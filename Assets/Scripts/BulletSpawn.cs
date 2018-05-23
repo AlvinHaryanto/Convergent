@@ -16,6 +16,7 @@ public class BulletSpawn : MonoBehaviour
     public GameObject offlaneUndeflectable;
     public GameObject split;
     public GameObject missile;
+	public GameObject EmptyBullet;
     public float timer;
 
     Vector3 location;
@@ -43,6 +44,7 @@ public class BulletSpawn : MonoBehaviour
         //4: Offlane- Undeflectable
         //5: Split (undeflectable only)
         //6: Missile (deflectable MUST)
+		//7: Empty / Silent (ada bagian di pattern yang kosong)
 
         //lane ID legend;
         //0: left
@@ -50,7 +52,8 @@ public class BulletSpawn : MonoBehaviour
         //2: mid
         //3: offlane right
         //4: right
-        addBullet(0, 2);
+        
+		/*addBullet(0, 2);
         addBullet(0, 4);
         addBullet(0, 0);
         addBullet(0, 2);
@@ -63,7 +66,8 @@ public class BulletSpawn : MonoBehaviour
         addBullet(5, 0);
         addBullet(5, 2);
         addBullet(6, 2);
-        addBullet(6, 4);
+        addBullet(6, 4);*/
+        
     }
 
     public int GetChooser()
@@ -128,6 +132,12 @@ public class BulletSpawn : MonoBehaviour
                 case 6:
                     tempBullet = Instantiate(missile, location, bullet.transform.rotation);
                     break;
+				case 7:
+					tempBullet = Instantiate (EmptyBullet, location, bullet.transform.rotation);
+					break;
+
+			
+				
             }
             /*
 			//Debug.Log ("timer done");

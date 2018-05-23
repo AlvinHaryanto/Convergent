@@ -4,17 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
-    public int EnemyHP = 3;
+	
+	public float EnemyHP = 3; 
+
     public float speed = 10f;
 
     public Transform target;
     private int wavepointIndex = 0;
     
-
+	public float maxHp;
     bool canDeflect;
     private void Start()
     {
         target = Waypoints.points[0];
+		maxHp = EnemyHP;
         //canDeflect = GameObject.Find("Bullet").GetComponent<BulletMovement>().GetDeflecting();
     }
     private void FixedUpdate()
@@ -67,6 +70,18 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }*/
+
+	void Update() {
+		//Debug.Log ("Enemy hp is " + EnemyHP);
+	}
+
+	public bool isDead() {
+		if (EnemyHP >= 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
    
 
