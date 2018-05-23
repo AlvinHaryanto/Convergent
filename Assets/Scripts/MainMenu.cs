@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
     // Use this for initialization
     void Start()
     {
@@ -43,5 +42,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Mainmenu(Demo)");
     }
 
+    public void LoadSceneNamed(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 
 }
