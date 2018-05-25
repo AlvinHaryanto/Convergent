@@ -23,7 +23,11 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 492}
   m_MaxSize: {x: 18006, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 1771
+=======
+  controlID: 5443
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +128,11 @@ MonoBehaviour:
   m_MinSize: {x: 434, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 1772
+=======
+  controlID: 5420
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +259,11 @@ MonoBehaviour:
   m_MinSize: {x: 434, y: 271}
   m_MaxSize: {x: 14004, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 1906
+=======
+  controlID: 5394
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,8 +280,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 464
     height: 420
+=======
+    width: 375
+    height: 331
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
@@ -305,24 +322,31 @@ MonoBehaviour:
     height: 399
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 544c0000
     m_LastClickedID: 19540
     m_ExpandedIDs: 6261ffffbce4ffff88e6ffffc8e7ffffb0eaffffe0f0ffff00000000
+=======
+    scrollPos: {x: 0, y: 107}
+    m_SelectedIDs: 603c0000083c0000
+    m_LastClickedID: 15368
+    m_ExpandedIDs: f015feff061bfeff36f1ffff00000000323c0000723c00008a3c0000
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Panel
+      m_OriginalName: Panel
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -125456
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
@@ -347,8 +371,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 464
     y: 0
+<<<<<<< HEAD
     width: 913
     height: 420
+=======
+    width: 737
+    height: 331
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
@@ -395,19 +424,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Prefab
+=======
+    - Assets/Scripts
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\caprielo101\Documents\GitHub\Convergent\Convergent
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 70}
     m_SelectedIDs: 92390000
     m_LastClickedID: 14738
     m_ExpandedIDs: 000000000c320000b4330000183900008a3b00008e3b0000c43b000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 91}
+    m_SelectedIDs: 46380000
+    m_LastClickedID: 14406
+    m_ExpandedIDs: 00000000f83100009e33000002390000763b00007a3b0000b03b000000ca9a3bffffff7f
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -435,7 +479,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000000c320000b4330000183900008a3b00008e3b0000c43b000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 00000000f83100009e33000002390000763b00007a3b0000b03b000000ca9a3bffffff7f
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -460,8 +508,13 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 544c0000
     m_LastClickedInstanceID: 19540
+=======
+    m_SelectedInstanceIDs: 603c0000083c0000
+    m_LastClickedInstanceID: 15456
+>>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
