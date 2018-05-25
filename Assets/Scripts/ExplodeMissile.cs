@@ -21,9 +21,9 @@ public class ExplodeMissile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PO = -1.06f;
         rb = GetComponent<Rigidbody>();
-        ship = GameObject.Find("Ship");
+        ship = GameObject.Find("Player");
+        PO = ship.transform.position.z;
         //rb.velocity = new Vector3(0f, 0f, 1 * speed * Time.deltaTime);
         deflecting = false;
     }
