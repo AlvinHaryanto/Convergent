@@ -101,10 +101,14 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
 <<<<<<< HEAD
+    - _Rotation: 89.2681
+=======
+<<<<<<< HEAD
     - _Rotation: 192.26242
 =======
     - _Rotation: 2510.684
 >>>>>>> parent of eb75a7a... Main Menu SPin, Retry with Space on Gameover
+>>>>>>> parent of 5c76bdb... Revert "Revert "Main Menu SPin, Retry with Space on Gameover""
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

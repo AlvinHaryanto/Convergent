@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convergent", "Convergent.csproj", "{B56E26AF-8C0C-FB24-6C1B-1B4D2A3F81EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convergent.Editor", "Convergent.Editor.csproj", "{2BA6A344-B26A-C109-927B-11A7329D29E5}"
