@@ -47,4 +47,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
+    public void ToOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
+
 }

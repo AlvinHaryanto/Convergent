@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMusic : MonoBehaviour {
 
 	public AudioClip BGM;
-
+    
 	void Start () {
 		BackMusic.instance.PlayMusic (BGM);
 	}

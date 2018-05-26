@@ -19,4 +19,14 @@ public class SFX : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    public void SetVolume(float x)
+    {
+        source.volume = x;
+    }
+
+    public float GetVolume()
+    {
+        return source.volume;
+    }
 }
