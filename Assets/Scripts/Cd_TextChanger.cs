@@ -9,7 +9,7 @@ public class Cd_TextChanger : MonoBehaviour {
         ResultText = GetComponent<Text>();
         if (PlayerPrefs.GetString("Result")=="")
         {
-            ResultText.text = "Game Over";
+            ResultText.text = "game over";
         }
         else {
             ResultText.text = PlayerPrefs.GetString("Result");

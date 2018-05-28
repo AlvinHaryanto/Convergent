@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
 
     void GameOver()
     {
-        PlayerPrefs.SetString("Result","Victory!");
+        PlayerPrefs.SetString("Result","victory!");
         SceneManager.LoadScene("Gameover(Demo)");
     }
     /*void OnTriggerStay(Collider col)

@@ -27,7 +27,7 @@ public class DeathTrigger : MonoBehaviour
 
     public void Gameover()
     {
-        PlayerPrefs.SetString("Result", "Game Over");
+        PlayerPrefs.SetString("Result", "game over");
         SceneManager.LoadScene("Gameover(Demo)");
     }
 }
