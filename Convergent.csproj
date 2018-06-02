@@ -314,6 +314,7 @@
     <Compile Include="Assets\Scripts\DeflectTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\ExplodeMissile.cs" />
+    <Compile Include="Assets\Scripts\GhostBullet.cs" />
     <Compile Include="Assets\Scripts\HPBar.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

@@ -16,6 +16,7 @@ public class BulletSpawn : MonoBehaviour
     public GameObject offlaneUndeflectable;
     public GameObject split;
     public GameObject missile;
+    public GameObject ghostybullet;
 	//public GameObject EmptyBullet;
     public float timer;
 
@@ -45,6 +46,7 @@ public class BulletSpawn : MonoBehaviour
         //5: Split (undeflectable only)
         //6: Missile (deflectable MUST)
 		//7: Empty / Silent (ada bagian di pattern yang kosong)
+        //8: Ghost - Undeflectable
 
         //lane ID legend;
         //0: left
@@ -134,6 +136,10 @@ public class BulletSpawn : MonoBehaviour
 				case 7:
 					//EMPTY BULLET
 					break;
+                case 8:
+                    tempBullet = Instantiate(ghostybullet, location, bullet.transform.rotation);
+                    break;
+               
 
 			
 				
