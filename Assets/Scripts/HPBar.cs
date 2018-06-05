@@ -16,7 +16,7 @@ public class HPBar : MonoBehaviour {
 
 	void Update() {
 		EnemyHP.value = (EnemyScript.EnemyHP / EnemyScript.maxHp);
-		Debug.Log (EnemyScript.EnemyHP + ", " + EnemyScript.maxHp);
+		//Debug.Log (EnemyScript.EnemyHP + ", " + EnemyScript.maxHp);
 		//Debug.Log ("Enemy hp is " + EnemyScript.EnemyHP + ", Value = " + EnemyHP.value);
 	}
 }

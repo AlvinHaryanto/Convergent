@@ -28,6 +28,7 @@ public class DeathTrigger : MonoBehaviour
     public void Gameover()
     {
         PlayerPrefs.SetString("Result", "game over");
+		BackMusic.instance.source.mute = true; //setelah mati lagunya matiin
         SceneManager.LoadScene("Gameover(Demo)");
     }
 }

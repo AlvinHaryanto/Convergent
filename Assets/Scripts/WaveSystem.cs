@@ -6,18 +6,19 @@ public class WaveSystem : MonoBehaviour {
 
 	BulletSpawn BSPAWN;
 	public GameObject FirstBoss;
-
+	GetReady GR;
 
 	void Start() {
 		//BSPAWN = GameObject.Find ("BulletSpawn").GetComponent<BulletSpawn> ();
 		BSPAWN = FindObjectOfType<BulletSpawn>();
+		GR = FindObjectOfType<GetReady> ();
 
 		//BSPAWN.addBullet (1, 2);
 
 	}
 
 	void Update() {
-		if (!FirstBoss.GetComponent<Enemy> ().isDead()) {
+		if (!FirstBoss.GetComponent<Enemy> ().isDead() && GR.BeginTheGame == true) {
 			PatternBos1 ();
 		}
 	}
