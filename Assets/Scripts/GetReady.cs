@@ -19,13 +19,13 @@ public class GetReady : MonoBehaviour {
 		if (preparationTime > 1) {
 			preparationTime -= Time.deltaTime;
 			if (preparationTime <= temp - 1f) {
-				GetReadyText.fontSize = 140;
+				GetReadyText.fontSize = 160;
 				GetReadyText.text = ((int)preparationTime).ToString ();
 			}
 
 		}else {
 			preparationTime = 0;
-			GetReadyText.fontSize = 65;
+			GetReadyText.fontSize = 75;
 			GetReadyText.text = "START!";
 
 			StartCoroutine (WaitToDestroy());

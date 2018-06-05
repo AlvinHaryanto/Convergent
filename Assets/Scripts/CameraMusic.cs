@@ -10,7 +10,10 @@ public class CameraMusic : MonoBehaviour {
 
 	void Awake() {
 		GR = FindObjectOfType<GetReady> ();
-		BackMusic.instance.source.mute = false;
+		if (SceneManager.GetActiveScene ().name != "TryOut") {
+			BackMusic.instance.source.mute = false;
+		}
+
 	}
 	void Start () {
 		
@@ -26,6 +29,7 @@ public class CameraMusic : MonoBehaviour {
 	IEnumerator PlayingMusic() {
 		yield return new WaitForSeconds (GR.preparationTime - 1);
 		BackMusic.instance.PlayMusic (BGM);
+		BackMusic.instance.source.mute = false;
 	}
 
 }
