@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Sc_BulletSplit.cs" />
      <Compile Include="Assets\Scripts\Sc_RotateSky.cs" />
+     <Compile Include="Assets\Scripts\SelectLevel.cs" />
      <Compile Include="Assets\Scripts\SFX.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\VolumeManager.cs" />

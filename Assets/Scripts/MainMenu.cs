@@ -52,4 +52,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Options");
     }
 
+	public void ToSelectLevel() {
+		SceneManager.LoadScene("SelectLevel");
+	}
+
 }
