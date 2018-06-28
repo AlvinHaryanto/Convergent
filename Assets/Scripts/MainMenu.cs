@@ -21,10 +21,10 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void PlayGame()
+    /*public void PlayGame()
     {
-        SceneManager.LoadScene("TryOut");
-    }
+        SceneManager.LoadScene("Song1Easy");
+    }*/
 
     public void QuitGame()
     {
@@ -34,7 +34,7 @@ public class MainMenu : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene("TryOut");
+		SceneManager.LoadScene(DeathTrigger.PrevScene);
     }
 
     public void Mainmenu()

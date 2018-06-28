@@ -8,6 +8,7 @@ public class DeathTrigger : MonoBehaviour
 
     public GameObject ship;
     public GameObject explosion;
+	public static string PrevScene;
 
    void OnTriggerStay(Collider col)
     {
@@ -27,7 +28,8 @@ public class DeathTrigger : MonoBehaviour
 
     public void Gameover()
     {
-        PlayerPrefs.SetString("Result", "game over");
+		PrevScene = SceneManager.GetActiveScene ().name;
+		PlayerPrefs.SetString("Result", "game over");
 		BackMusic.instance.source.mute = true; //setelah mati lagunya matiin
         SceneManager.LoadScene("Gameover(Demo)");
     }

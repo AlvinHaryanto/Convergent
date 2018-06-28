@@ -8,16 +8,17 @@ public class CameraMusic : MonoBehaviour {
 	public AudioClip BGM;
 	GetReady GR;
 
+
 	void Awake() {
 		GR = FindObjectOfType<GetReady> ();
-		if (SceneManager.GetActiveScene ().name != "TryOut") {
+		if (SceneManager.GetActiveScene ().name != "Song1Easy") {
 			BackMusic.instance.source.mute = false;
 		}
 
 	}
 	void Start () {
 		
-		if (SceneManager.GetActiveScene ().name == "TryOut") {
+		if (SceneManager.GetActiveScene ().name == "Song1Easy") {
 			StartCoroutine (PlayingMusic ());
 		} else {
 			BackMusic.instance.PlayMusic (BGM);
@@ -27,6 +28,7 @@ public class CameraMusic : MonoBehaviour {
 	}
 
 	IEnumerator PlayingMusic() {
+		BackMusic.instance.source.mute = true;
 		yield return new WaitForSeconds (GR.preparationTime - 1);
 		BackMusic.instance.PlayMusic (BGM);
 		BackMusic.instance.source.mute = false;

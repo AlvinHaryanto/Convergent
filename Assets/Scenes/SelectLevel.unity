@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41265222, g: 0.33647606, b: 0.50129074, a: 1}
+  m_IndirectSpecularColor: {r: 0.41272527, g: 0.33651158, b: 0.50119084, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 863229405}
+        m_MethodName: GoEasy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
