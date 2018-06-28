@@ -17,7 +17,8 @@ public class SelectLevel : MonoBehaviour {
 		Lunatic.interactable = false; //You can't play Song 1 on Lunatic Difficulty
 		Easy.interactable = true; //If u switch to song2, and go back to song1 u can access back ur easy choice
 
-		BackMusic.instance.PlayMusic (Song1);
+		//BackMusic.instance.PlayMusic (Song1);
+		StartCoroutine(PlayPreview(Song1));
 		PrevSong.gameObject.SetActive (false);
 		NextSong.gameObject.SetActive (true);
 
@@ -29,12 +30,20 @@ public class SelectLevel : MonoBehaviour {
 		Lunatic.interactable = true;
 		Easy.interactable = false;
 
-		BackMusic.instance.PlayMusic (Song2);
+		//BackMusic.instance.PlayMusic (Song2);
+		StartCoroutine(PlayPreview(Song2));
 		PrevSong.gameObject.SetActive (true);
 		NextSong.gameObject.SetActive (false);
 
 		CoverSong1.gameObject.SetActive (false);
 		CoverSong2.gameObject.SetActive (true);
+	}
+
+	IEnumerator PlayPreview(AudioClip MusicClip) {
+		BackMusic.instance.source.mute = true;
+		yield return new WaitForSeconds (0.8f);
+		BackMusic.instance.source.mute = false;
+		BackMusic.instance.PlayMusic (MusicClip);
 	}
 
 }
