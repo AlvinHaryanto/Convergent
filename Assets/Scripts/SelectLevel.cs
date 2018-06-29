@@ -5,6 +5,19 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SelectLevel : MonoBehaviour {
+	[System.Serializable]
+	public class SongList
+	{
+		public Sprite coverImage;
+		public AudioClip audioSnippet;
+		public bool easyEnable;
+		public bool normalEnable;
+		public bool hardEnable;
+		public bool LunaticEnable;
+	}
+
+	public SongList[] songList;
+	public float WaitAnimation;
 
 	public Button Easy, Medium, Hard, Lunatic, NextSong, PrevSong;
 	public AudioClip Song1, Song2;
@@ -16,46 +29,111 @@ public class SelectLevel : MonoBehaviour {
 	}
 
 	public void GoEasy() {
-		if (Flag == 1) {
-			SceneManager.LoadScene ("Song1Easy");
-		} else if (Flag == 2) {
-			// .....
-		}
+		SceneManager.LoadScene ("Song"+(Flag+1)+"Easy");
+	}
+
+	public void GoMedium() {
+		SceneManager.LoadScene ("Song"+(Flag+1)+"Medium");
+	}
+
+	public void GoHard() {
+		SceneManager.LoadScene ("Song"+(Flag+1)+"Hard");
+	}
+
+	public void GoLunatic() {
+		SceneManager.LoadScene ("Song"+(Flag+1)+"Lunatic");
 	}
 
 	public void PreviewSong1() {
 		Lunatic.interactable = false; //You can't play Song 1 on Lunatic Difficulty
 		Easy.interactable = true; //If u switch to song2, and go back to song1 u can access back ur easy choice
-		Flag = 1;
+		Flag = 0;
 
 		//BackMusic.instance.PlayMusic (Song1);
 		StartCoroutine(PlayPreview(Song1));
-		PrevSong.gameObject.SetActive (false);
-		NextSong.gameObject.SetActive (true);
+		/*PrevSong.gameObject.SetActive (false);
+		NextSong.gameObject.SetActive (true);*/
 
-		CoverSong1.gameObject.SetActive (true);
-		CoverSong2.gameObject.SetActive (false);
+		/*CoverSong1.gameObject.SetActive (true);
+		CoverSong2.gameObject.SetActive (true);*/
 	}
 
 	public void PreviewSong2() {
 		Lunatic.interactable = true;
 		Easy.interactable = false;
-		Flag = 2;
+		Flag = 1;
 
 		//BackMusic.instance.PlayMusic (Song2);
 		StartCoroutine(PlayPreview(Song2));
-		PrevSong.gameObject.SetActive (true);
-		NextSong.gameObject.SetActive (false);
+		/*PrevSong.gameObject.SetActive (true);
+		NextSong.gameObject.SetActive (false);*/
 
-		CoverSong1.gameObject.SetActive (false);
-		CoverSong2.gameObject.SetActive (true);
+		/*CoverSong1.gameObject.SetActive (false);
+		CoverSong2.gameObject.SetActive (true);*/
 	}
+	private void selectSong(){
+		//gambar, lagu
+		CoverSong1.sprite = songList[Flag].coverImage;
+		if (Flag + 1 >= songList.Length) {
+			CoverSong2.sprite= songList [0].coverImage;
+		} else {
+			CoverSong2.sprite= songList[Flag+1].coverImage;
+		}
 
+		StartCoroutine(PlayPreview(songList[Flag].audioSnippet));
+
+		Easy.interactable = songList [Flag].easyEnable;
+		Medium.interactable = songList [Flag].normalEnable;
+		Hard.interactable = songList [Flag].hardEnable;
+		Lunatic.interactable = songList [Flag].LunaticEnable;
+
+	}
+	public void nextSong(){
+		//<===ANIMATION OF SWITCHING COVER ARTS== NEXT COVER
+		//antisipasi loop
+		increaseFlag();
+		selectSong ();
+	}
+	public void prevSong(){
+		//<===ANIMATION OF SWITCHING COVER ARTS== NEXT COVER
+		//antisipasi loop
+		decreaseFlag();
+		selectSong ();
+	}
+	private void decreaseFlag(){
+		Flag--;
+		if(Flag<0){
+			Flag = songList.Length - 1;
+		}
+	}
+	private void increaseFlag(){
+		Flag++;
+		if(Flag>songList.Length-1){
+			Flag = 0;
+		}
+	}
 	IEnumerator PlayPreview(AudioClip MusicClip) {
 		BackMusic.instance.source.mute = true;
-		yield return new WaitForSeconds (0.8f);
+		turnOffDiffButtons();
+
+		yield return new WaitForSeconds (WaitAnimation);
+
+		turnOnDiffButtons ();
 		BackMusic.instance.source.mute = false;
 		BackMusic.instance.PlayMusic (MusicClip);
 	}
+	private void turnOffDiffButtons(){
+		Easy.gameObject.SetActive (false);
+		Medium.gameObject.SetActive (false);
+		Hard.gameObject.SetActive (false);
+		Lunatic.gameObject.SetActive (false);
+	}
 
+	private void turnOnDiffButtons(){
+		//<<ADD ANIMATION OF BUTTON APPEARING HERE!!!
+		Easy.gameObject.SetActive (true);
+		Medium.gameObject.SetActive (true);
+		Hard.gameObject.SetActive (true);
+		Lunatic.gameObject.SetActive (true);
+	}
 }

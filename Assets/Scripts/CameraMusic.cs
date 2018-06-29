@@ -11,18 +11,26 @@ public class CameraMusic : MonoBehaviour {
 
 	void Awake() {
 		GR = FindObjectOfType<GetReady> ();
-		if (SceneManager.GetActiveScene ().name != "Song1Easy") {
-			BackMusic.instance.source.mute = false;
-		}
+		BackMusic.instance.source.mute = false;
 
 	}
 	void Start () {
-		
-		if (SceneManager.GetActiveScene ().name == "Song1Easy") {
+		//StartCoroutine (PlayingMusic ());
+		if (SceneManager.GetActiveScene ().name == "Mainmenu(Demo)" ||
+			SceneManager.GetActiveScene ().name == "Options" ||
+			SceneManager.GetActiveScene ().name == "Gameover(Demo)" ||
+			SceneManager.GetActiveScene ().name == "SelectLevel")
+		{
+			BackMusic.instance.PlayMusic (BGM);
+		}else {
+			StartCoroutine (PlayingMusic ());
+		}
+
+		/*if (SceneManager.GetActiveScene ().name == "Song1Easy") {
 			StartCoroutine (PlayingMusic ());
 		} else {
 			BackMusic.instance.PlayMusic (BGM);
-		}
+		}*/
 
 
 	}

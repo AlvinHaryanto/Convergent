@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41272527, g: 0.33651158, b: 0.50119084, a: 1}
+  m_IndirectSpecularColor: {r: 0.41269878, g: 0.33650938, b: 0.5011931, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -356,15 +356,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4080456667564750, guid: 0c4616309ac5f224ea05aa747e120a97, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4080456667564750, guid: 0c4616309ac5f224ea05aa747e120a97, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4080456667564750, guid: 0c4616309ac5f224ea05aa747e120a97, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4080456667564750, guid: 0c4616309ac5f224ea05aa747e120a97, type: 2}
       propertyPath: m_LocalRotation.w
@@ -476,34 +476,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BGM: {fileID: 8300000, guid: a5cbf056e16141143a97805f163c51c6, type: 3}
---- !u!1 &674526624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 674526625}
-  m_Layer: 0
-  m_Name: VolumeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &674526625
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674526624}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 815.5, y: 132.44626, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &858195307
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,15 +802,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4346458407460404, guid: a56f3c6df0faf6a41bf7269575ca6d46, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4346458407460404, guid: a56f3c6df0faf6a41bf7269575ca6d46, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4346458407460404, guid: a56f3c6df0faf6a41bf7269575ca6d46, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4346458407460404, guid: a56f3c6df0faf6a41bf7269575ca6d46, type: 2}
       propertyPath: m_LocalRotation.w

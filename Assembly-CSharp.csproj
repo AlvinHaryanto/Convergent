@@ -87,6 +87,8 @@
      <Compile Include="Assets\Scripts\SFX.cs" />
      <Compile Include="Assets\Scripts\Turret.cs" />
      <Compile Include="Assets\Scripts\VolumeManager.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel1_Easy.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel1_Hard.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\WaveSystem.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
