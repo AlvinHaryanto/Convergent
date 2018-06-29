@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\BulletSpawn.cs" />
      <Compile Include="Assets\Scripts\CameraMusic.cs" />
+     <Compile Include="Assets\Scripts\Cd_CoverAnimation.cs" />
      <Compile Include="Assets\Scripts\Cd_RestartLevel.cs" />
      <Compile Include="Assets\Scripts\Cd_TextChanger.cs" />
      <Compile Include="Assets\Scripts\DeathTrigger.cs" />
