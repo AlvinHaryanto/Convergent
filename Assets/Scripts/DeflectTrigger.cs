@@ -25,7 +25,7 @@ public class DeflectTrigger : MonoBehaviour {
         else
 		if (Input.GetKey(KeyCode.Space))
         {
-			if (col.gameObject.tag == "Bullet"&&col.gameObject.GetComponent<BulletMovement>().deflectable) {
+			if (col.gameObject.tag == "Bullet"&&col.gameObject.GetComponent<BulletMovement>().deflectable&& !col.gameObject.GetComponent<BulletMovement>().deflecting) {
                 player.plyrAnim.Play("ShipDeflect");
                 Debug.Log("Deflected");
                 col.gameObject.SendMessage("SetDeflecting",true);

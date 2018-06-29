@@ -30,7 +30,7 @@ public class BulletSpawn : MonoBehaviour
 
     private void Start()
     {
-        location = new Vector3(0, 0, 67.59f);
+        location = new Vector3(0, 0, 70f);
         count = 0;
 
         offlaneLeft = -3.3f;

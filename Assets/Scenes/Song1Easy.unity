@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.060941152, g: 0.05762206, b: 0.06591015, a: 1}
+  m_IndirectSpecularColor: {r: 0.061003998, g: 0.057677425, b: 0.06598772, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1117,7 +1117,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1240613837
+  randomSeed: -787939428
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4524,6 +4524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d48e8667af1d9645bb0d4c145d1d8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSpawn: {fileID: 1812602610}
   BGM: {fileID: 8300000, guid: 3e6cf8c60e54ea146b7181a263cee7da, type: 3}
 --- !u!4 &1334964188 stripped
 Transform:
@@ -4937,7 +4938,7 @@ MonoBehaviour:
   split: {fileID: 1618751022388860, guid: a1223274539aa4242aa5fd2880e2ce23, type: 2}
   missile: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
   ghostybullet: {fileID: 0}
-  timer: 0.45
+  timer: 0.4615385
 --- !u!1001 &1845846076
 Prefab:
   m_ObjectHideFlags: 0
@@ -5019,7 +5020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1883723463
 Transform:
   m_ObjectHideFlags: 0
@@ -5284,56 +5285,13 @@ Prefab:
       propertyPath: right
       value: 
       objectReference: {fileID: 879427944}
-    - target: {fileID: 114380615633455548, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: speed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512402242446524, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 65402171068760406, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 14.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 65479792965447582, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65402171068760406, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 65402171068760406, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 5.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 65402171068760406, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 2.036
-      objectReference: {fileID: 0}
-    - target: {fileID: 114316857471862022, guid: f680047ae82a14b429b68564f5cf2b73,
-        type: 2}
-      propertyPath: deflectClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cadcd9eed65fdeb4f9c71a7b03401c3b, type: 3}
-    - target: {fileID: 1021625609514362, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075863044537534, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 1075863044537534, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021625609514362, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}

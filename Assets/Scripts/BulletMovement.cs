@@ -65,7 +65,7 @@ public class BulletMovement : MonoBehaviour
         }
         else
         {
-            if (transform.position.z <= -10 || transform.position.z >= 70f)
+            if (transform.position.z <= -10 || transform.position.z >= 80f)
             {
                 Destroy(gameObject);
             }

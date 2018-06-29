@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5bd835e5f04984aa33ace57e2647bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4900
+  speed: 5000
   deflectable: 1
   deflecting: 0
   damage: 1

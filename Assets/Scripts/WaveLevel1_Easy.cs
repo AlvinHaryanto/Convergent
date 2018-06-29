@@ -32,8 +32,8 @@ public class WaveLevel1_Easy : MonoBehaviour {
 	}
 
 	void PatternBos1() {
-		//1-40
-		BSPAWN.addBullet (7, 2);
+        //1-40
+        BSPAWN.addBullet (7, 2);
 		BSPAWN.addBullet (0, 2);
 		BSPAWN.addBullet (7, 4);
 		BSPAWN.addBullet (7, 0);

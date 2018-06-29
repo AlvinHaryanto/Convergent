@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CameraMusic : MonoBehaviour {
-
+    public BulletSpawn bulletSpawn;
 	public AudioClip BGM;
 	GetReady GR;
 
@@ -37,7 +37,7 @@ public class CameraMusic : MonoBehaviour {
 
 	IEnumerator PlayingMusic() {
 		BackMusic.instance.source.mute = true;
-		yield return new WaitForSeconds (GR.preparationTime - 1);
+		yield return new WaitForSeconds (GR.preparationTime - bulletSpawn.timer);
 		BackMusic.instance.PlayMusic (BGM);
 		BackMusic.instance.source.mute = false;
 	}
