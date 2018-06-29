@@ -17,7 +17,8 @@ public class SelectLevel : MonoBehaviour {
 	}
 
 	public SongList[] songList;
-	public float WaitAnimation;
+    public Cd_CoverAnimation coverAnimHandler;
+    public float WaitAnimation;
 
 	public Button Easy, Medium, Hard, Lunatic, NextSong, PrevSong;
 	public AudioClip Song1, Song2;
@@ -73,16 +74,21 @@ public class SelectLevel : MonoBehaviour {
 	}
 	private void selectSong(){
 		//gambar, lagu
-		CoverSong1.sprite = songList[Flag].coverImage;
-		if (Flag + 1 >= songList.Length) {
-			CoverSong2.sprite= songList [0].coverImage;
-		} else {
-			CoverSong2.sprite= songList[Flag+1].coverImage;
-		}
 
 		StartCoroutine(PlayPreview(songList[Flag].audioSnippet));
+        //StartCoroutine(DelayedCoverSwitch());
+        /*
+        CoverSong1.sprite = songList[Flag].coverImage;
+        if (Flag + 1 >= songList.Length)
+        {
+            CoverSong2.sprite = songList[0].coverImage;
+        }
+        else
+        {
+            CoverSong2.sprite = songList[Flag + 1].coverImage;
+        }*/
 
-		Easy.interactable = songList [Flag].easyEnable;
+        Easy.interactable = songList [Flag].easyEnable;
 		Medium.interactable = songList [Flag].normalEnable;
 		Hard.interactable = songList [Flag].hardEnable;
 		Lunatic.interactable = songList [Flag].LunaticEnable;
@@ -93,13 +99,16 @@ public class SelectLevel : MonoBehaviour {
 		//antisipasi loop
 		increaseFlag();
 		selectSong ();
+        coverAnimHandler.SetCoverSwitching(1);
 	}
 	public void prevSong(){
 		//<===ANIMATION OF SWITCHING COVER ARTS== NEXT COVER
 		//antisipasi loop
 		decreaseFlag();
 		selectSong ();
-	}
+        coverAnimHandler.SetCoverSwitching(-1);
+
+    }
 	private void decreaseFlag(){
 		Flag--;
 		if(Flag<0){
@@ -114,26 +123,56 @@ public class SelectLevel : MonoBehaviour {
 	}
 	IEnumerator PlayPreview(AudioClip MusicClip) {
 		BackMusic.instance.source.mute = true;
-		turnOffDiffButtons();
+		turnOffButtons();
 
 		yield return new WaitForSeconds (WaitAnimation);
 
-		turnOnDiffButtons ();
+		turnOnButtons ();
 		BackMusic.instance.source.mute = false;
 		BackMusic.instance.PlayMusic (MusicClip);
 	}
-	private void turnOffDiffButtons(){
+    IEnumerator DelayedCoverSwitch()
+    {
+        yield return new WaitForSeconds(WaitAnimation);
+
+        CoverSong1.sprite = songList[Flag].coverImage;
+        if (Flag + 1 >= songList.Length)
+        {
+            CoverSong2.sprite = songList[0].coverImage;
+        }
+        else
+        {
+            CoverSong2.sprite = songList[Flag + 1].coverImage;
+        }
+    }
+    public void switchCover()
+    {
+        CoverSong1.sprite = songList[Flag].coverImage;
+        if (Flag + 1 >= songList.Length)
+        {
+            CoverSong2.sprite = songList[0].coverImage;
+        }
+        else
+        {
+            CoverSong2.sprite = songList[Flag + 1].coverImage;
+        }
+    }
+	private void turnOffButtons(){
 		Easy.gameObject.SetActive (false);
 		Medium.gameObject.SetActive (false);
 		Hard.gameObject.SetActive (false);
 		Lunatic.gameObject.SetActive (false);
-	}
+        NextSong.gameObject.SetActive(false);
+        PrevSong.gameObject.SetActive(false);
+    }
 
-	private void turnOnDiffButtons(){
+	private void turnOnButtons(){
 		//<<ADD ANIMATION OF BUTTON APPEARING HERE!!!
 		Easy.gameObject.SetActive (true);
 		Medium.gameObject.SetActive (true);
 		Hard.gameObject.SetActive (true);
 		Lunatic.gameObject.SetActive (true);
-	}
+        NextSong.gameObject.SetActive(true);
+        PrevSong.gameObject.SetActive(true);
+    }
 }
