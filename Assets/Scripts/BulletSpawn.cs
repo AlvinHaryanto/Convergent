@@ -82,7 +82,7 @@ public class BulletSpawn : MonoBehaviour
         //Debug.Log (count);
         count += Time.deltaTime;
         
-        if (count >= timer)
+        if (count >= timer&&finalIndex>0)
         {
             switch (LaneList[currInterval])
             {

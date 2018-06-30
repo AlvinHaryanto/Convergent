@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.061003998, g: 0.057677425, b: 0.06598772, a: 1}
+  m_IndirectSpecularColor: {r: 0.060932845, g: 0.057664, b: 0.06596058, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4525,7 +4525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawn: {fileID: 1812602610}
-  BGM: {fileID: 8300000, guid: 3e6cf8c60e54ea146b7181a263cee7da, type: 3}
+  BGM: {fileID: 8300000, guid: 6518d06b48d17ad45b51b410a9eb5302, type: 3}
 --- !u!4 &1334964188 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4788710981626690, guid: efaff079a12be534793db93434f353ab,
@@ -4937,7 +4937,8 @@ MonoBehaviour:
     type: 2}
   split: {fileID: 1618751022388860, guid: a1223274539aa4242aa5fd2880e2ce23, type: 2}
   missile: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
-  ghostybullet: {fileID: 0}
+  ghostybullet: {fileID: 1211776261404756, guid: ecc09fecca0febc4fa1869a30d176f24,
+    type: 2}
   timer: 0.4615385
 --- !u!1001 &1845846076
 Prefab:
@@ -5270,6 +5271,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1075863044537534, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 114380615633455548, guid: f680047ae82a14b429b68564f5cf2b73,
         type: 2}
       propertyPath: left
@@ -5285,14 +5290,6 @@ Prefab:
       propertyPath: right
       value: 
       objectReference: {fileID: 879427944}
-    - target: {fileID: 1075863044537534, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021625609514362, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f680047ae82a14b429b68564f5cf2b73, type: 2}
   m_IsPrefabParent: 0

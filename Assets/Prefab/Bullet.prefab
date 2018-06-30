@@ -200,7 +200,7 @@ MonoBehaviour:
   rotateSpeed: 200
   explosion: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 2}
   Model: {fileID: 1727161225235950}
-  explosionSound: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 3a6984e69c334d84db6cbad4633f3708, type: 3}
 --- !u!135 &135735439271927926
 SphereCollider:
   m_ObjectHideFlags: 1

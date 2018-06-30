@@ -204,7 +204,7 @@ public class WaveLevel1_Easy : MonoBehaviour {
 		BSPAWN.addBullet(7,2);
 		BSPAWN.addBullet(1,0);
 		BSPAWN.addBullet(7,4);
-		BSPAWN.addBullet(7,1);
+		BSPAWN.addBullet(7,2);
 
 		BSPAWN.addBullet(1,4);
 		BSPAWN.addBullet(7,2);

@@ -173,7 +173,7 @@ public class WaveSystem : MonoBehaviour {
 		BSPAWN.addBullet(0,2);
 		BSPAWN.addBullet(1,0);
 		BSPAWN.addBullet(0,4);
-		BSPAWN.addBullet(0,1);
+		BSPAWN.addBullet(0,2);
 		BSPAWN.addBullet(1,4);
 		BSPAWN.addBullet(0,2);
 
