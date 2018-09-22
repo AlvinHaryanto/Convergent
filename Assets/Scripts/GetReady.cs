@@ -7,7 +7,7 @@ public class GetReady : MonoBehaviour {
 
 	public Text GetReadyText;
 	public bool BeginTheGame; //ini nanti berhubungan sama timer sebelum mulai + music nya
-	public float preparationTime; // berapa lama waktu delay nya
+	public float preparationTime=3; // berapa lama waktu delay nya
 
 	void Start()
     {
