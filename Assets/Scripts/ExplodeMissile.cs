@@ -23,7 +23,7 @@ public class ExplodeMissile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         ship = GameObject.Find("Player");
-        PO = ship.transform.position.z;
+        PO = ship.transform.position.z-2;
         //rb.velocity = new Vector3(0f, 0f, 1 * speed * Time.deltaTime);
         deflecting = false;
     }
@@ -31,7 +31,7 @@ public class ExplodeMissile : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log("Anim speed is "+rocketAnim.speed);
         if (transform.position.z <= PO)
         {
             Instantiate(bullet, ship.transform.position,transform.rotation);

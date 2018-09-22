@@ -24,7 +24,6 @@ public class BulletSpawn : MonoBehaviour
 
     private float offlaneLeft, offlaneRight;
     int DeflectDir;
-    int BulletChooser;
     float count;
     GameObject tempBullet;
 
@@ -33,7 +32,7 @@ public class BulletSpawn : MonoBehaviour
         location = new Vector3(0, 0, 70f);
         count = 0;
 
-        offlaneLeft = -3.3f;
+        offlaneLeft = -3.48f;
         offlaneRight = 3.48f;
 
         //initialize bullet list here
@@ -71,12 +70,7 @@ public class BulletSpawn : MonoBehaviour
         addBullet(6, 4);*/
         
     }
-
-    public int GetChooser()
-    {
-        return BulletChooser;
-    }
-
+    
     void Update()
     {
         //Debug.Log (count);

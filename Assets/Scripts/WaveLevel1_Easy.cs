@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveLevel1_Easy : MonoBehaviour {
-
+    private bool hasLoaded=false;
 	BulletSpawn BSPAWN;
 	public GameObject FirstBoss;
 	GetReady GR;
@@ -26,8 +26,9 @@ public class WaveLevel1_Easy : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!FirstBoss.GetComponent<Enemy> ().isDead() && GR.BeginTheGame == true) {
+		if (!FirstBoss.GetComponent<Enemy> ().isDead() && GR.BeginTheGame == true&&!hasLoaded) {
 			PatternBos1 ();
+            hasLoaded = true;
 		}
 	}
 

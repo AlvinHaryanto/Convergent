@@ -9,7 +9,7 @@ public class Cd_RestartLevel : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown("space"))
         {
-            SceneManager.LoadScene("TryOut");
+            SceneManager.LoadScene(PlayerPrefs.GetString("LastLevelPlayed","MainMenu(Demo)"));
         }
 	}
 }

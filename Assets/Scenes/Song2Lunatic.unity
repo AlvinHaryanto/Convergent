@@ -8138,7 +8138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d48e8667af1d9645bb0d4c145d1d8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpawn: {fileID: 1812602610}
+  bulletSpawn: {fileID: 0}
   BGM: {fileID: 8300000, guid: 92670defb4624a5419776204b933fcd0, type: 3}
 --- !u!4 &1334964188 stripped
 Transform:
@@ -8803,7 +8803,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812602608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27dfc8ac067a1a4785bef52af40687e, type: 3}
+  m_Script: {fileID: 11500000, guid: a10e939d23e006940a894fb9c6546cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1793003022058096, guid: 1cf12cd9f0fb990459906e65dca833e9, type: 2}
@@ -8814,8 +8814,15 @@ MonoBehaviour:
     type: 2}
   split: {fileID: 1618751022388860, guid: a1223274539aa4242aa5fd2880e2ce23, type: 2}
   missile: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
-  ghostybullet: {fileID: 0}
-  timer: 0.45
+  ghostybullet: {fileID: 1211776261404756, guid: ecc09fecca0febc4fa1869a30d176f24,
+    type: 2}
+  level: 2
+  difficulty: 4
+  bm: {fileID: 0}
+  distance: 4200
+  velocityMult: 1
+  noteSpeed: 5000
+  songBPM: 100
 --- !u!1001 &1845846076
 Prefab:
   m_ObjectHideFlags: 0

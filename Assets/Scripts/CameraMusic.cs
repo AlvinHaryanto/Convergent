@@ -19,9 +19,15 @@ public class CameraMusic : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "Mainmenu(Demo)" ||
 			SceneManager.GetActiveScene ().name == "Options" ||
 			SceneManager.GetActiveScene ().name == "Gameover(Demo)" ||
-			SceneManager.GetActiveScene ().name == "SelectLevel")
+			SceneManager.GetActiveScene ().name == "SelectLevel"||
+            SceneManager.GetActiveScene().name == "SelectLevel-V2" 
+            )
 		{
-			BackMusic.instance.PlayMusic (BGM);
+            if (!BackMusic.instance.source.isPlaying||BackMusic.instance.source.clip!=BGM)
+            {
+                BackMusic.instance.PlayMusic(BGM);
+
+            }
 		}else {
 			StartCoroutine (PlayingMusic ());
 		}

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveLevel2_Medium : MonoBehaviour {
-
-	BulletSpawn BSPAWN;
+    private bool hasLoaded = false;
+    BulletSpawn BSPAWN;
 	public GameObject FirstBoss;
 	GetReady GR;
     //0: Normal - Undeflectable
@@ -26,8 +26,9 @@ public class WaveLevel2_Medium : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!FirstBoss.GetComponent<Enemy> ().isDead() && GR.BeginTheGame == true) {
+		if (!FirstBoss.GetComponent<Enemy> ().isDead() && GR.BeginTheGame == true && !hasLoaded) {
 			PatternBos1 ();
+            hasLoaded = true;
 		}
 	}
 
@@ -72,50 +73,50 @@ public class WaveLevel2_Medium : MonoBehaviour {
         //bar 9-24 pattern 16x4 = 64
         BSPAWN.addBullet(2, 3);
         BSPAWN.addBullet(5, 4);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(3, 1);
         BSPAWN.addBullet(0, 0);
         BSPAWN.addBullet(1, 2);
-        BSPAWN.addBullet(5, 4);
+        BSPAWN.addBullet(7, 0);
 
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(1, 4);
-        BSPAWN.addBullet(3, 1);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(3, 1);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
 
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(5, 0);
         BSPAWN.addBullet(0, 4);
-        BSPAWN.addBullet(0, 2);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(4, 1);
-        BSPAWN.addBullet(3, 1);
+        BSPAWN.addBullet(7, 0);
 
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(1, 4);
-        BSPAWN.addBullet(3, 1);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(3, 1);
-        BSPAWN.addBullet(4, 1);
+        BSPAWN.addBullet(7, 0);
 
         /*_____________________________________________________*/
 
         BSPAWN.addBullet(2, 3);
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(2, 3);
-        BSPAWN.addBullet(2, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(0, 2);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 1);
-        BSPAWN.addBullet(1, 4);
+        BSPAWN.addBullet(7, 0);
 
         BSPAWN.addBullet(2, 3);
         BSPAWN.addBullet(2, 1);
@@ -128,12 +129,12 @@ public class WaveLevel2_Medium : MonoBehaviour {
 
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(3, 1);
-        BSPAWN.addBullet(0, 2);
-        BSPAWN.addBullet(0, 0);
+        BSPAWN.addBullet(7, 0);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
         BSPAWN.addBullet(1, 4);
-        BSPAWN.addBullet(2, 3);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
+        BSPAWN.addBullet(7, 0);
 
         BSPAWN.addBullet(2, 3);
         BSPAWN.addBullet(2, 3);
@@ -149,15 +150,15 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(7, 3);
         BSPAWN.addBullet(0, 4);
         BSPAWN.addBullet(7, 3);
-        BSPAWN.addBullet(5, 2);
+        BSPAWN.addBullet(5, 0);
         BSPAWN.addBullet(7, 2);
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(4, 3);
 
         BSPAWN.addBullet(4, 3);
         BSPAWN.addBullet(0, 2);
-        BSPAWN.addBullet(1, 4);
-        BSPAWN.addBullet(0, 0);
+        BSPAWN.addBullet(1, 0);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(2, 3);
@@ -170,13 +171,13 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(4, 3);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(0, 2);
+        BSPAWN.addBullet(7, 0);
 
-        BSPAWN.addBullet(2, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(0, 0);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(0, 2);
-        BSPAWN.addBullet(5, 4);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 3);
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(2, 1);
@@ -184,9 +185,9 @@ public class WaveLevel2_Medium : MonoBehaviour {
         //33-36
         BSPAWN.addBullet(3, 1);
         BSPAWN.addBullet(4, 3);
-        BSPAWN.addBullet(3, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(2, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(5, 2);
@@ -195,9 +196,9 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(0, 4);
         BSPAWN.addBullet(1, 2);
         BSPAWN.addBullet(4, 1);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(1, 0);
-        BSPAWN.addBullet(1, 4);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
 
         //37-40
@@ -222,14 +223,14 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(7, 3);
         BSPAWN.addBullet(5, 4);
         //41 - 48
-        BSPAWN.addBullet(0, 0);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(0, 2);
-        BSPAWN.addBullet(0, 4);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
 
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(0, 4);
-        BSPAWN.addBullet(0, 2);
-        BSPAWN.addBullet(1, 0);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
 
         BSPAWN.addBullet(3, 1);
@@ -237,30 +238,30 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(7, 4);
         BSPAWN.addBullet(0, 4);
         //44
-        BSPAWN.addBullet(5, 0);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
         BSPAWN.addBullet(7, 3);
         BSPAWN.addBullet(5, 4);
         //45
-        BSPAWN.addBullet(4, 1);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(3, 1);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(2, 3);
         //46
-        BSPAWN.addBullet(5, 2);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 1);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(0, 2);
         //47
         BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(3, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(1, 2);
         //48
         BSPAWN.addBullet(5, 2);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(5, 0);
+        BSPAWN.addBullet(7, 0);
         /**/
 
         //49-64
@@ -271,13 +272,13 @@ public class WaveLevel2_Medium : MonoBehaviour {
         //50
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(1, 2);
-        BSPAWN.addBullet(3, 1);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(2, 3);
         //51
         BSPAWN.addBullet(5, 2);
-        BSPAWN.addBullet(1, 0);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(4, 3);
-        BSPAWN.addBullet(5, 0);
+        BSPAWN.addBullet(7, 0);
         //52
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(2, 3);
@@ -311,7 +312,7 @@ public class WaveLevel2_Medium : MonoBehaviour {
         //58
         BSPAWN.addBullet(3, 1);
         BSPAWN.addBullet(3, 3);
-        BSPAWN.addBullet(1, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(1, 1);
         //59
         BSPAWN.addBullet(5, 0);
@@ -326,10 +327,10 @@ public class WaveLevel2_Medium : MonoBehaviour {
         //61
         BSPAWN.addBullet(4, 1);
         BSPAWN.addBullet(3, 1);
-        BSPAWN.addBullet(4, 3);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(5, 0);
         //62
-        BSPAWN.addBullet(5, 4);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(0, 2);
         BSPAWN.addBullet(3, 1);
         BSPAWN.addBullet(3, 3);
@@ -340,7 +341,7 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(7, 4);
         //64
         BSPAWN.addBullet(2, 1);
-        BSPAWN.addBullet(2, 1);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(3, 3);
 
@@ -357,7 +358,7 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(7, 3);
         BSPAWN.addBullet(5, 4);
         //67
-        BSPAWN.addBullet(2, 1);
+        BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(3, 1);
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(2, 3);
@@ -376,7 +377,7 @@ public class WaveLevel2_Medium : MonoBehaviour {
         BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(3, 3);
         BSPAWN.addBullet(4, 3);
-        BSPAWN.addBullet(4, 1);
+        BSPAWN.addBullet(7, 0);
         //71
         BSPAWN.addBullet(7, 1);
         BSPAWN.addBullet(7, 1);

@@ -289,6 +289,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cd_LevelSelectV2.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
@@ -307,6 +308,7 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\BulletSpawn.cs" />
+    <Compile Include="Assets\Scripts\BulletSpawnV2.cs" />
     <Compile Include="Assets\Scripts\CameraMusic.cs" />
     <Compile Include="Assets\Scripts\Cd_CoverAnimation.cs" />
     <Compile Include="Assets\Scripts\Cd_RestartLevel.cs" />
@@ -319,6 +321,7 @@
     <Compile Include="Assets\Scripts\GhostBullet.cs" />
     <Compile Include="Assets\Scripts\HPBar.cs" />
     <Compile Include="Assets\Scripts\LevelNotes\Cd_LevelInputInterfaceTemplate.cs" />
+    <Compile Include="Assets\Scripts\LevelNotes\WaveLevel2_Lunatic.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Sc_BulletSplit.cs" />
@@ -353,6 +356,7 @@
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Smoke Scroll.shader" />
     <None Include="Assets\JMO Assets\WarFX\_Effects (Mobile)\MuzzleFlashes\!MuzzleFlash Differences.txt" />
     <None Include="Assets\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
+    <None Include="Assets\LevelBulletEntries\Entry0-10.txt" />
     <None Include="Assets\Spaceship\readme.txt" />
     <None Include="Assets\StarSparrow\ReadMe.txt" />
   </ItemGroup>

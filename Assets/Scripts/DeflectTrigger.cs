@@ -25,7 +25,7 @@ public class DeflectTrigger : MonoBehaviour {
     {
         BulletMovement tempBullet = col.gameObject.GetComponent<BulletMovement>();
         //deflect off-lane if movement direction is correct
-        if (tempBullet.getLaneID()==1&&tempBullet.deflectable && !col.gameObject.GetComponent<BulletMovement>().deflecting)
+        if (tempBullet&&(tempBullet.getLaneID()==1|| tempBullet.getLaneID() == 3) &&tempBullet.deflectable && !tempBullet.deflecting)
         {
 			if(tempBullet.getDeflectDir()==player.getPlayerDir()){
 				//Kalau inputan player (player dir, liat di script playermovement) sesuai dengan
@@ -33,13 +33,15 @@ public class DeflectTrigger : MonoBehaviour {
 				player.plyrAnim.Play("ShipDeflect");
 				col.gameObject.SendMessage("SetDeflecting",true);
 				SFX.instance.source.PlayOneShot(deflectClip);
-			}
+                tempBullet.DeflectCoord(2);
+            }
 		}
         else
         if (curDuration>0&&col.gameObject.tag == "Bullet" && col.gameObject.GetComponent<BulletMovement>().deflectable && !col.gameObject.GetComponent<BulletMovement>().deflecting)
         {
             player.plyrAnim.Play("ShipDeflect");
             col.gameObject.SendMessage("SetDeflecting", true);
+            tempBullet.DeflectCoord(2);
             SFX.instance.source.PlayOneShot(deflectClip);
         }
     }

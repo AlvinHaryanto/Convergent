@@ -48,7 +48,7 @@ public class GhostBullet : MonoBehaviour {
         }
         if (startTrans)
         {
-            bullet.GetComponent<MeshRenderer>().material.color = new Color(OriginColor.r,OriginColor.g,OriginColor.b, bullet.GetComponent<MeshRenderer>().material.color.a - Time.deltaTime * TransMult);
+            bullet.GetComponent<MeshRenderer>().material.color = new Color(OriginColor.r,OriginColor.g,OriginColor.b,(transform.position.z-PO2/PO-PO2));
             
         }
         /*if (rocketMain.deflecting)

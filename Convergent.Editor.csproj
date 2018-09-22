@@ -314,6 +314,7 @@
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Smoke Scroll.shader" />
     <None Include="Assets\JMO Assets\WarFX\_Effects (Mobile)\MuzzleFlashes\!MuzzleFlash Differences.txt" />
     <None Include="Assets\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
+    <None Include="Assets\LevelBulletEntries\Entry0-10.txt" />
     <None Include="Assets\Spaceship\readme.txt" />
     <None Include="Assets\StarSparrow\ReadMe.txt" />
   </ItemGroup>
