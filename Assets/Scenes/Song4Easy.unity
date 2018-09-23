@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.9078647, g: 0.89599204, b: 0.9047592, a: 1}
+  m_IndirectSpecularColor: {r: 0.9079774, g: 0.89616984, b: 0.90481985, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1885,7 +1885,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1627846966
+  randomSeed: -1878278385
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5501,7 +5501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawn: {fileID: 1812602610}
-  BGM: {fileID: 8300000, guid: 6518d06b48d17ad45b51b410a9eb5302, type: 3}
+  BGM: {fileID: 8300000, guid: 960d888904bb71342965e1af4a1dff9f, type: 3}
 --- !u!4 &1334964188 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4788710981626690, guid: efaff079a12be534793db93434f353ab,
@@ -5516,6 +5516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1345619220}
   - component: {fileID: 1345619219}
+  - component: {fileID: 1345619221}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -5529,7 +5530,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1345619218}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 778cb937d0ccba04dac443690c42cd79, type: 3}
   m_Name: 
@@ -5548,6 +5549,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1345619221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1345619218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8a03aeb8abe014baef64b69e937458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstBoss: {fileID: 1770284217}
 --- !u!1 &1487715663
 GameObject:
   m_ObjectHideFlags: 0
@@ -6255,7 +6268,7 @@ MonoBehaviour:
   missile: {fileID: 1211163858010350, guid: 13dc23110d152ba4fb2c9af7fe13c4f9, type: 2}
   ghostybullet: {fileID: 1211776261404756, guid: ecc09fecca0febc4fa1869a30d176f24,
     type: 2}
-  timer: 0.4615385
+  timer: 0.4615
 --- !u!1001 &1845846076
 Prefab:
   m_ObjectHideFlags: 0
