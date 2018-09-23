@@ -342,6 +342,7 @@
     <Compile Include="Assets\Scripts\WaveLevel2_Hard.cs" />
     <Compile Include="Assets\Scripts\WaveLevel2_Lunatic.cs" />
     <Compile Include="Assets\Scripts\WaveLevel2_Medium.cs" />
+    <Compile Include="Assets\Scripts\WaveLevel3_Lunatic.cs" />
     <Compile Include="Assets\Scripts\WaveLevel4_Lunatic.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\WaveSystem.cs" />

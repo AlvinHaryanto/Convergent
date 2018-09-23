@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Song4Easy.unity
+- path: Assets/Scenes/Mainmenu(Demo).unity
   isLoaded: 1
   isActive: 1

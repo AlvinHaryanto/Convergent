@@ -32,7 +32,7 @@ public class WaveLevel4_Lunatic : MonoBehaviour {
 	}
 
 	void PatternBos1() {
-    
+      
         BSPAWN.addBullet(7, 0);//1
         BSPAWN.addBullet(7, 0);
         BSPAWN.addBullet(7, 0);
