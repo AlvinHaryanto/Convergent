@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde0cbd9854337941ad549e3192a6aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 150
+  bpm: 130
 --- !u!114 &114647478917021806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,7 +497,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -10
 --- !u!212 &212112562308234460
 SpriteRenderer:
   m_ObjectHideFlags: 1

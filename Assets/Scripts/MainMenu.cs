@@ -55,5 +55,8 @@ public class MainMenu : MonoBehaviour
 	public void ToSelectLevel() {
 		SceneManager.LoadScene("SelectLevel");
 	}
-
+    public void DeleteSave()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

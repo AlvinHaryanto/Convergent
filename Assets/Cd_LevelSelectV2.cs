@@ -8,6 +8,7 @@ public class Cd_LevelSelectV2 : MonoBehaviour {
     [System.Serializable]
     public class SongList
     {
+        public Button coverButton;
         public AudioClip audioSnippet;
         public bool easyEnable;
         public bool normalEnable;
@@ -23,6 +24,14 @@ public class Cd_LevelSelectV2 : MonoBehaviour {
 
     private void Start()
     {
+        songList[0].coverButton.interactable = true;
+        for(int i = 0; i < 4; i++)
+        {
+            if (PlayerPrefs.GetInt("song" + (i) + "lock", 0) != 0)
+            {
+                songList[i].coverButton.interactable = true;
+            }
+        }
         easyButton.interactable = false;
         mediumButton.interactable = false;
         hardButton.interactable = false;

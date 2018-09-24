@@ -139,6 +139,5 @@ public class BulletMovement : MonoBehaviour
     public void DeflectCoord(float z)
     {
         transform.position = new Vector3(this.transform.position.x,this.transform.position.y,z);
-        Debug.Log(this.transform.position.z);
     }
 }

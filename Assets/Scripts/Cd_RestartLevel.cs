@@ -7,7 +7,7 @@ public class Cd_RestartLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && PlayerPrefs.GetString("Result")=="game over")
         {
             SceneManager.LoadScene(PlayerPrefs.GetString("LastLevelPlayed","MainMenu(Demo)"));
         }

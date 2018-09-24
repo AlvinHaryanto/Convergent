@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06095607, g: 0.05765584, b: 0.065995246, a: 1}
+  m_IndirectSpecularColor: {r: 0.06098602, g: 0.057715423, b: 0.06602341, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4822,31 +4822,7 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 432320337}
-    - target: {fileID: 4415900792845612, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4415900792845612, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4415900792845612, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114647478917021806, guid: babb2d1c8c78d224abd27f43543008cd,
-        type: 2}
-      propertyPath: EnemyHP
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 114292881798420810, guid: babb2d1c8c78d224abd27f43543008cd,
-        type: 2}
-      propertyPath: bpm
-      value: 130
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 23958757033253158, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
-    - {fileID: 33730595397759450, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: babb2d1c8c78d224abd27f43543008cd, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1983215646

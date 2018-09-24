@@ -162,11 +162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1b736f34754a94abe12a9d4173108d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocketAnim: {fileID: 0}
   bullet: {fileID: 1629732459759962}
   ship: {fileID: 0}
   TransMult: 7.5
-  PO: 25
+  PO: 50
   PO2: 5
 --- !u!114 &114531602200639402
 MonoBehaviour:

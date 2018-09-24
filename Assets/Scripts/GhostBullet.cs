@@ -5,7 +5,6 @@ using UnityEngine;
 public class GhostBullet : MonoBehaviour {
     bool startTrans = false;
     Rigidbody rb;
-    public Animator rocketAnim;
     
     public GameObject bullet;
    
@@ -17,14 +16,15 @@ public class GhostBullet : MonoBehaviour {
     bool deflecting;
     private float timer;
     private Color OriginColor;
-    
+    private Material mesh;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         ship = GameObject.Find("Player");
-        OriginColor = GetComponent<MeshRenderer>().material.color;
+        mesh = transform.GetChild(0).GetComponent<MeshRenderer>().material;
+        OriginColor = mesh.color;
 
 
     
@@ -40,7 +40,7 @@ public class GhostBullet : MonoBehaviour {
     {
         if(transform.position.z <= PO2)
         {
-            bullet.GetComponent<MeshRenderer>().material.color = OriginColor;
+            mesh.color = OriginColor;
             startTrans = false;
         }else if (transform.position.z <= PO)
         {
@@ -48,8 +48,7 @@ public class GhostBullet : MonoBehaviour {
         }
         if (startTrans)
         {
-            bullet.GetComponent<MeshRenderer>().material.color = new Color(OriginColor.r,OriginColor.g,OriginColor.b,(transform.position.z-PO2/PO-PO2));
-            
+            mesh.color = new Color(OriginColor.r,OriginColor.g,OriginColor.b,((transform.position.z-PO2)/(PO-PO2)));
         }
         /*if (rocketMain.deflecting)
         {

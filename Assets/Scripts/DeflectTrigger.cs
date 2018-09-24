@@ -15,6 +15,7 @@ public class DeflectTrigger : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             curDuration = onDuration;
+            player.plyrAnim.Play("ShipDeflect");
         }
         if (curDuration > 0)
         {
@@ -28,19 +29,19 @@ public class DeflectTrigger : MonoBehaviour {
         if (tempBullet&&(tempBullet.getLaneID()==1|| tempBullet.getLaneID() == 3) &&tempBullet.deflectable && !tempBullet.deflecting)
         {
 			if(tempBullet.getDeflectDir()==player.getPlayerDir()){
-				//Kalau inputan player (player dir, liat di script playermovement) sesuai dengan
-				//input yang diminta (bullet movement.deflectdir) --> deflect
-				player.plyrAnim.Play("ShipDeflect");
-				col.gameObject.SendMessage("SetDeflecting",true);
-				SFX.instance.source.PlayOneShot(deflectClip);
+                //Kalau inputan player (player dir, liat di script playermovement) sesuai dengan
+                //input yang diminta (bullet movement.deflectdir) --> deflect
+
+                col.gameObject.SendMessage("SetDeflecting", true);
+                SFX.instance.source.PlayOneShot(deflectClip);
                 tempBullet.DeflectCoord(2);
             }
 		}
         else
         if (curDuration>0&&col.gameObject.tag == "Bullet" && col.gameObject.GetComponent<BulletMovement>().deflectable && !col.gameObject.GetComponent<BulletMovement>().deflecting)
         {
-            player.plyrAnim.Play("ShipDeflect");
             col.gameObject.SendMessage("SetDeflecting", true);
+            player.plyrAnim.Play("ShipDeflect");
             tempBullet.DeflectCoord(2);
             SFX.instance.source.PlayOneShot(deflectClip);
         }

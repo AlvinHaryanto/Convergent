@@ -14,8 +14,9 @@ public class DeathTrigger : MonoBehaviour
     {
         if(col.gameObject.tag == "Bullet")
         {
+            BulletMovement bMov = col.gameObject.GetComponent<BulletMovement>();
             //destroy only if is not deflecting offlane correctly
-            if(!(col.gameObject.GetComponent<BulletMovement>().getLaneID()==1&& col.gameObject.GetComponent<BulletMovement>().getDeflectDir()==ship.GetComponent<PlayerMovement>().getPlayerDir()))
+            if(!(bMov.getLaneID()==1&& bMov.getDeflectDir()==ship.GetComponent<PlayerMovement>().getPlayerDir())&&!bMov.deflecting)
             {
                 Instantiate(explosion, col.transform.position, col.transform.rotation);
                 Destroy(col.gameObject);
