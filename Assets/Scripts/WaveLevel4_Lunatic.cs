@@ -138,7 +138,7 @@ public class WaveLevel4_Lunatic : MonoBehaviour {
 
         BSPAWN.addBullet(5, 0);
         BSPAWN.addBullet(1, 2);
-        BSPAWN.addBullet(2, 2);
+        BSPAWN.addBullet(2, 1);
         BSPAWN.addBullet(1, 2);
 
         BSPAWN.addBullet(4, 3);

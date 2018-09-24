@@ -33,8 +33,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectLevel-V2.unity
     guid: 3e54666c7f794b34c82a9f42bd402827
   - enabled: 1
+    path: Assets/Scenes/Song3Medium.unity
+    guid: 16beadd7d6acbf04088f94a13750a70d
+  - enabled: 1
+    path: Assets/Scenes/Song3Hard.unity
+    guid: fff92853fd3b3384790cf4e171e866a0
+  - enabled: 1
     path: Assets/Scenes/Song3Lunatic.unity
     guid: 8c0f20fe6fee347479007d9249db2a87
+  - enabled: 1
+    path: Assets/Scenes/Song4Medium.unity
+    guid: 8d6871da5b92ccd43b0edc5760b5375c
+  - enabled: 1
+    path: Assets/Scenes/Song4Hard.unity
+    guid: 21bbfc2a46393404d9eca4c8f81b33d9
   - enabled: 1
     path: Assets/Scenes/Song4Lunatic.unity
     guid: 528e503565295bc4597fed040122015c
