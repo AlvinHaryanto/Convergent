@@ -59,4 +59,19 @@ public class MainMenu : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
     }
+
+    public void TestCompletion1()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            PlayerPrefs.SetInt("Song" + (i + 1) + "Easy" + "complete", 1);
+            PlayerPrefs.SetInt("Song" + (i + 1) + "Medium" + "complete", 1);
+            PlayerPrefs.SetInt("Song" + (i + 1) + "Hard" + "complete", 1);
+            PlayerPrefs.SetInt("Song" + (i + 1) + "Lunatic" + "complete", 1);
+        }
+    }
+    public void TestCompletion2()
+    {
+        PlayerPrefs.SetInt("song5lock", 1);
+    }
 }

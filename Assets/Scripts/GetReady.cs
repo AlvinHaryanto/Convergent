@@ -13,8 +13,6 @@ public class GetReady : MonoBehaviour {
     {
         
 		PlayerPrefs.SetString("LastLevelPlayed", SceneManager.GetActiveScene().name);
-		SFX.instance.PlayStartt ();
-		SFX.instance.PlayTick321 ();
 		StartCoroutine(CountDown());
 	}
 
@@ -29,6 +27,7 @@ public class GetReady : MonoBehaviour {
         }
         GetReadyText.fontSize = 75;
         GetReadyText.text = "START!";
+        SFX.instance.PlayStartt();
         StartCoroutine(WaitToDestroy());
         BeginTheGame = true;
     }

@@ -289,6 +289,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cd_CompletionChecker.cs" />
+    <Compile Include="Assets\Cd_DeleteData.cs" />
     <Compile Include="Assets\Cd_LevelSelectV2.cs" />
     <Compile Include="Assets\Cd_LevelUnlocker.cs" />
     <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />

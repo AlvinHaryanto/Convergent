@@ -133,3 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 82065736278614376}
+  mampus: {fileID: 8300000, guid: 934ee799d13727e49888710e8631b8e3, type: 3}
+  menang: {fileID: 8300000, guid: b1ceb6458ab28844096032bac5231539, type: 3}
+  startt: {fileID: 8300000, guid: 6aef5cbc6a236b549a1d75741200f548, type: 3}
+  tick321: {fileID: 8300000, guid: 672623f96999b1d44aa40a378d60ef18, type: 3}

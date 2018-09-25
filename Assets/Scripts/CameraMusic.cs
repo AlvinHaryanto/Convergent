@@ -20,7 +20,8 @@ public class CameraMusic : MonoBehaviour {
 			SceneManager.GetActiveScene ().name == "Options" ||
 			SceneManager.GetActiveScene ().name == "Gameover(Demo)" ||
 			SceneManager.GetActiveScene ().name == "How2Play"||
-            SceneManager.GetActiveScene().name == "SelectLevel-V2" 
+            SceneManager.GetActiveScene().name == "SelectLevel-V2" ||
+            SceneManager.GetActiveScene().name == "Credits"
             )
 		{
             if (!BackMusic.instance.source.isPlaying||BackMusic.instance.source.clip!=BGM)

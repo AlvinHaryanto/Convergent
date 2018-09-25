@@ -13,6 +13,7 @@ public class Cd_LevelUnlocker : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("song"+lastLevel.Substring(4,1)+"lock",1);
                 Debug.Log(lastLevel.Substring(4, 1));
+                PlayerPrefs.SetInt(lastLevel+"complete",1);
             }
         }
 	}
