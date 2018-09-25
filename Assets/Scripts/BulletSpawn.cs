@@ -202,7 +202,7 @@ public class BulletSpawn : MonoBehaviour
             {
                 currInterval = 0;
             }
-            count = 0;
+			count -= timer;
         }
 
 
