@@ -7,6 +7,8 @@ public class SFX : MonoBehaviour {
     public static SFX instance;
     public AudioSource source;
 
+	public AudioClip mampus, menang, startt, tick321;
+
     private void Awake()
     {
         if (instance == null)
@@ -19,6 +21,22 @@ public class SFX : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+	public void PlayMampus() {
+		source.PlayOneShot (mampus);
+	}
+
+	public void PlayMenang() {
+		source.PlayOneShot (menang);
+	}
+
+	public void PlayStartt() {
+		source.PlayOneShot (startt);
+	}
+
+	public void PlayTick321() {
+		source.PlayOneShot (tick321);
+	}
 
     public void SetVolume(float x)
     {

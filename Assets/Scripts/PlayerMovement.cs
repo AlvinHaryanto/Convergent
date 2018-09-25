@@ -27,7 +27,9 @@ public class PlayerMovement : MonoBehaviour {
 		testTarget = right.position;
 		testTarget2 = left.position;
         */
-        plyrAnim = GetComponent<Animator>();
+		//SFX.instance.PlayStartt ();
+
+		plyrAnim = GetComponent<Animator>();
 		offlaneLeft = -3.3f;
 		offlaneRight = 3.48f;
     }

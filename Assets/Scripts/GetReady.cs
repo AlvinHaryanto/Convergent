@@ -11,8 +11,11 @@ public class GetReady : MonoBehaviour {
 
 	void Start()
     {
-        PlayerPrefs.SetString("LastLevelPlayed", SceneManager.GetActiveScene().name);
-        StartCoroutine(CountDown());
+        
+		PlayerPrefs.SetString("LastLevelPlayed", SceneManager.GetActiveScene().name);
+		SFX.instance.PlayStartt ();
+		SFX.instance.PlayTick321 ();
+		StartCoroutine(CountDown());
 	}
 
     IEnumerator CountDown()
@@ -21,6 +24,7 @@ public class GetReady : MonoBehaviour {
         {
             GetReadyText.fontSize = 160;
             GetReadyText.text = ((int)(3-i)).ToString();
+			SFX.instance.PlayTick321 ();
             yield return new WaitForSeconds(1f);
         }
         GetReadyText.fontSize = 75;

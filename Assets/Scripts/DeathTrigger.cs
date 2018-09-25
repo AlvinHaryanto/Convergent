@@ -8,6 +8,8 @@ public class DeathTrigger : MonoBehaviour
 
     public GameObject ship;
     public GameObject explosion;
+
+
 	public static string PrevScene;
 
    void OnTriggerStay(Collider col)
@@ -21,6 +23,7 @@ public class DeathTrigger : MonoBehaviour
                 Instantiate(explosion, col.transform.position, col.transform.rotation);
                 Destroy(col.gameObject);
                 Destroy(ship.gameObject);
+				SFX.instance.PlayMampus ();
                 Gameover();
             }
         }

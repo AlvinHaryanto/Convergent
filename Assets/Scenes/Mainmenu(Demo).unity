@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41330862, g: 0.33674565, b: 0.5014351, a: 1}
+  m_IndirectSpecularColor: {r: 0.41298437, g: 0.3366285, b: 0.5013129, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -379,6 +379,26 @@ Prefab:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114822598677931016, guid: 0c4616309ac5f224ea05aa747e120a97,
+        type: 2}
+      propertyPath: mampus
+      value: 
+      objectReference: {fileID: 8300000, guid: 934ee799d13727e49888710e8631b8e3, type: 3}
+    - target: {fileID: 114822598677931016, guid: 0c4616309ac5f224ea05aa747e120a97,
+        type: 2}
+      propertyPath: menang
+      value: 
+      objectReference: {fileID: 8300000, guid: b1ceb6458ab28844096032bac5231539, type: 3}
+    - target: {fileID: 114822598677931016, guid: 0c4616309ac5f224ea05aa747e120a97,
+        type: 2}
+      propertyPath: startt
+      value: 
+      objectReference: {fileID: 8300000, guid: 6aef5cbc6a236b549a1d75741200f548, type: 3}
+    - target: {fileID: 114822598677931016, guid: 0c4616309ac5f224ea05aa747e120a97,
+        type: 2}
+      propertyPath: tick321
+      value: 
+      objectReference: {fileID: 8300000, guid: 672623f96999b1d44aa40a378d60ef18, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c4616309ac5f224ea05aa747e120a97, type: 2}
   m_IsPrefabParent: 0

@@ -51,7 +51,9 @@ public class Enemy : MonoBehaviour
         {
             //game over script from death trigger
             //SHOULD WAIT 3 SECONDS
-            GameOver();
+			SFX.instance.PlayMenang();
+
+			GameOver();
         }
     }
 
