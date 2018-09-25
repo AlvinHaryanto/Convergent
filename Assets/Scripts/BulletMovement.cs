@@ -45,13 +45,13 @@ public class BulletMovement : MonoBehaviour
     {
         if (deflecting == false)
         {
-            rb.velocity = new Vector3(0f, 0f, -1 * speed * Time.deltaTime);
+            rb.velocity = new Vector3(0f, 0f, -1 * speed * Time.fixedDeltaTime);
         }
         else if (deflecting == true && EnemyTarget == null)
         {
             //transform.Rotate(Vector3.up * Time.deltaTime, Space.World);
             transform.rotation = new Quaternion(0, 0, 180, 0);
-            rb.velocity = new Vector3(0f, 0f, speed * Time.deltaTime);
+            rb.velocity = new Vector3(0f, 0f, speed * Time.fixedDeltaTime);
 
         }
 
@@ -94,7 +94,7 @@ public class BulletMovement : MonoBehaviour
             transform.LookAt(target);
             //Vector3 rotateAmount = Vector3.Cross(transform.forward, direction);
             // rb.angularVelocity = rotateAmount * rotateSpeed;
-            rb.velocity = transform.forward * speed * Time.deltaTime;
+            rb.velocity = transform.forward * speed * Time.fixedDeltaTime;
 
             /*Vector3 direction = (Vector3)target.position - rb.position;
 			direction.Normalize ();

@@ -14,7 +14,7 @@ public class Sc_BulletSplit : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0f, 0f, -1 * speed * Time.deltaTime);
+        rb.velocity = new Vector3(0f, 0f, -1 * speed * Time.fixedDeltaTime);
     }
 	
 	// Update is called once per frame

@@ -19,7 +19,7 @@ public class CameraMusic : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "Mainmenu(Demo)" ||
 			SceneManager.GetActiveScene ().name == "Options" ||
 			SceneManager.GetActiveScene ().name == "Gameover(Demo)" ||
-			SceneManager.GetActiveScene ().name == "SelectLevel"||
+			SceneManager.GetActiveScene ().name == "How2Play"||
             SceneManager.GetActiveScene().name == "SelectLevel-V2" 
             )
 		{
