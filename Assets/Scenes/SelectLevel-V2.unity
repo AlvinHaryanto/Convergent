@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4138269, g: 0.33714482, b: 0.50197905, a: 1}
+  m_IndirectSpecularColor: {r: 0.41291088, g: 0.33656117, b: 0.5012488, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1144,18 +1144,18 @@ MonoBehaviour:
   - coverButton: {fileID: 1499197821}
     audioSnippet: {fileID: 8300000, guid: f9b3b40087e72d64788d14199ce3d360, type: 3}
     easyEnable: 0
-    normalEnable: 0
+    normalEnable: 1
     hardEnable: 1
-    lunaticEnable: 0
+    lunaticEnable: 1
   - coverButton: {fileID: 923294424}
     audioSnippet: {fileID: 8300000, guid: 2f6e32d3e826d2243824e4532235ea0f, type: 3}
-    easyEnable: 0
+    easyEnable: 1
     normalEnable: 1
     hardEnable: 1
     lunaticEnable: 1
   - coverButton: {fileID: 2009454727}
     audioSnippet: {fileID: 8300000, guid: f72fa32ef35308845b6aa15c4b6321fc, type: 3}
-    easyEnable: 0
+    easyEnable: 1
     normalEnable: 1
     hardEnable: 1
     lunaticEnable: 1

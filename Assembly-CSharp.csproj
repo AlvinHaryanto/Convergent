@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Cd_LevelSelectV2.cs" />
+     <Compile Include="Assets\Cd_LevelUnlocker.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
@@ -69,7 +71,9 @@
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\BulletSpawn.cs" />
+     <Compile Include="Assets\Scripts\BulletSpawnV2.cs" />
      <Compile Include="Assets\Scripts\CameraMusic.cs" />
+     <Compile Include="Assets\Scripts\Cd_AnimSpeedSync.cs" />
      <Compile Include="Assets\Scripts\Cd_CoverAnimation.cs" />
      <Compile Include="Assets\Scripts\Cd_RestartLevel.cs" />
      <Compile Include="Assets\Scripts\Cd_TextChanger.cs" />
@@ -80,6 +84,7 @@
      <Compile Include="Assets\Scripts\GetReady.cs" />
      <Compile Include="Assets\Scripts\GhostBullet.cs" />
      <Compile Include="Assets\Scripts\HPBar.cs" />
+     <Compile Include="Assets\Scripts\LevelNotes\Cd_LevelInputInterfaceTemplate.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Sc_BulletSplit.cs" />
@@ -90,12 +95,22 @@
      <Compile Include="Assets\Scripts\VolumeManager.cs" />
      <Compile Include="Assets\Scripts\WaveLevel1_Easy.cs" />
      <Compile Include="Assets\Scripts\WaveLevel1_Hard.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel2_Hard.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel2_Lunatic.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel2_Medium.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel3_Hard.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel3_Lunatic.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel3_Medium.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel4_Hard.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel4_Lunatic.cs" />
+     <Compile Include="Assets\Scripts\WaveLevel4_Medium.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\WaveSystem.cs" />
      <Compile Include="Assets\Scripts\Waypoints.cs" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend Scroll.shader" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Particle AddSoft A8.shader" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Specular TintColor.shader" />
+     <None Include="Assets\Spaceship\readme.txt" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend NoSoftParticles.shader" />
      <None Include="Assets\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Smoke Scroll.shader" />
@@ -107,6 +122,7 @@
      <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft Scroll.shader" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Particle Multiply A8.shader" />
+     <None Include="Assets\LevelBulletEntries\Entry0-10.txt" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Alpha-Diffuse TintColor.shader" />
      <None Include="Assets\StarSparrow\ReadMe.txt" />
